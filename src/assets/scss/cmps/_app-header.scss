@@ -1,0 +1,18 @@
+.app-header {
+    background: #03a9f4;
+    color: white;
+    height: rem(50px);
+
+    .main-nav {
+        gap: 10px;
+        a {
+            height: rem(40px);
+            line-height: rem(40px);
+            padding-inline: em(4px);
+
+            &.active{
+                background: darkblue;
+            }
+        }
+    }
+}

@@ -1,0 +1,63 @@
+// Externals
+
+// Setup
+@import "setup/variables";
+@import "setup/functions";
+@import "setup/mixins";
+
+// Basics
+@import "basics/typography";
+@import "basics/base";
+@import "basics/helpers";
+@import "basics/layout";
+@import "basics/modals";
+@import "basics/animations";
+
+// Views
+// @import "views/robot-index";
+// @import "views/robot-details";
+// @import "views/robot-edit";
+// @import "views/about";
+
+// Components
+// @import "cmps/robot-preview";
+// @import "cmps/robot-list";
+// @import "cmps/robot-filter";
+@import "cmps/app-header";
+// @import "cmps/nice-button";
+
+
+
+
+.main-app {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    main {
+        flex-grow: 1;
+        width: 100%;
+    }
+
+    > footer {
+        background-color: #111;
+        color: white;
+    }
+}
+
+.counter,
+.timer {
+    margin-top: 20%;
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+
+.counter {
+    button:nth-of-type(2) {
+        font-size: 2em;
+        display: block;
+        border: none;
+        background-color: inherit;
+    }
+}
