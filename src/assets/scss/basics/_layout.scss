@@ -29,3 +29,25 @@
     grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
     grid-gap: 30px;
 }
+
+
+.margin-inline{
+    margin-inline: $app-margin-size;
+}
+
+.padding-inline{
+    padding-inline: $app-margin-size;
+}
+
+.main-layout{
+    display: grid;
+    grid-template-columns: $app-margin-size 1fr $app-margin-size;
+
+    & > *{
+        grid-column: 2;
+    }
+
+    & > .full{
+        grid-column: 1 / -1;
+    }
+}

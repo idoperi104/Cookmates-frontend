@@ -6,6 +6,7 @@
 @import "setup/mixins";
 
 // Basics
+@import "basics/variables";
 @import "basics/typography";
 @import "basics/base";
 @import "basics/helpers";
@@ -14,36 +15,19 @@
 @import "basics/animations";
 
 // Views
-// @import "views/robot-index";
-// @import "views/robot-details";
-// @import "views/robot-edit";
+@import "views/main-app";
+@import "views/recipe-index";
+@import "views/recipe-details";
+@import "views/recipe-edit";
 // @import "views/about";
 
 // Components
-// @import "cmps/robot-preview";
-// @import "cmps/robot-list";
+@import "cmps/recipe-preview";
+@import "cmps/recipe-list";
 // @import "cmps/robot-filter";
 @import "cmps/app-header";
 // @import "cmps/nice-button";
 
-
-
-
-.main-app {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-
-    main {
-        flex-grow: 1;
-        width: 100%;
-    }
-
-    > footer {
-        background-color: #111;
-        color: white;
-    }
-}
 
 .counter,
 .timer {

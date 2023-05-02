@@ -28,7 +28,6 @@ export function RecipeIndex() {
 
 
     if (!recipes) return <div>Loading...</div>
-    console.log('RECIPE INDEX');
     return (
         <section className='recipe-index'>
             {/* <pre>{JSON.stringify(recipes, null, 2)}</pre> */}

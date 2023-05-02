@@ -8,10 +8,10 @@ import { AppHeader } from './cmps/AppHeader';
 function App() {
   return (
     <Router>
-        <section className="main-app">
+        <section className="main-layout main-app">
             <AppHeader />
 
-            <main className="container">
+            <main>
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/recipe" element={<RecipeIndex />} />
