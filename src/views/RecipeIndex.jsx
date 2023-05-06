@@ -2,6 +2,7 @@ import { useCallback, useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { loadRecipes, removeRecipe, setFilterBy } from '../store/actions/recipe.actions'
 import { RecipeList } from '../cmps/RecipeList'
+import { Link } from 'react-router-dom'
 
 export function RecipeIndex() {
     const recipes = useSelector((storeState) => storeState.recipeModule.recipes)
@@ -32,7 +33,7 @@ export function RecipeIndex() {
         <section className='recipe-index'>
             {/* <pre>{JSON.stringify(recipes, null, 2)}</pre> */}
             {/* <RecipeFilter filterBy={filterBy} onChangeFilter={onChangeFilter} /> */}
-            {/* <Link to="/recipe/edit">Add Recipe</Link> */}
+            <Link to="/recipe/edit">Add Recipe</Link>
             <RecipeList recipes={recipes} onRemoveRecipe={onRemoveRecipe} />
         </section>
     )

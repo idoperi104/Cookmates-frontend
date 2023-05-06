@@ -15,6 +15,10 @@ window.rs = recipeService;
 
 async function query(filterBy = { title: "" }) {
   var recipes = await storageService.query(STORAGE_KEY);
+  if(!recipes || recipes.length === 0){
+    await postRecipes()
+    recipes = await storageService.query(STORAGE_KEY);
+  }
   if (filterBy.txt) {
     const regex = new RegExp(filterBy.txt, "i");
     recipes = recipes.filter(
@@ -47,10 +51,9 @@ function getEmptyRecipe() {
     title: "",
     description: "",
     imgUrl: "",
-    prepTime: 20,
-    cookTime: 15,
-    totalTime: 35,
-    servings: 4,
+    prepTime: 0,
+    cookTime: 0,
+    servings: 0,
     ingredients: [],
     instructions: [],
     categories: [],
@@ -72,7 +75,6 @@ async function postRecipes() {
       imgUrl: "https://cdn.shopify.com/s/files/1/0205/9582/articles/20220211142347-margherita-9920_ba86be55-674e-4f35-8094-2067ab41a671.jpg?crop=center&height=915&v=1644590192&width=1200",
       prepTime: 20,
       cookTime: 15,
-      totalTime: 35,
       servings: 4,
       ingredients: [
         { name: "pizza dough", amount: "1 pound" },
@@ -102,7 +104,6 @@ async function postRecipes() {
         imgUrl: "https://images.immediate.co.uk/production/volatile/sites/30/2010/09/Thai-green-curry-bb9f6ae.jpg",
       prepTime: 15,
       cookTime: 30,
-      totalTime: 45,
       servings: 4,
       ingredients: [
         {
@@ -141,7 +142,6 @@ async function postRecipes() {
         imgUrl: "https://img.taste.com.au/_1Oq7zhg/taste/2016/11/warm-roasted-vegetable-salad-32532-1.jpeg",
       prepTime: 20,
       cookTime: 30,
-      totalTime: 50,
       servings: 4,
       ingredients: [
         { name: "red onion", amount: "1/2, sliced" },
@@ -182,7 +182,6 @@ async function postRecipes() {
       imgUrl: "https://cdn.shopify.com/s/files/1/0205/9582/articles/20220211142347-margherita-9920_ba86be55-674e-4f35-8094-2067ab41a671.jpg?crop=center&height=915&v=1644590192&width=1200",
       prepTime: 20,
       cookTime: 15,
-      totalTime: 35,
       servings: 4,
       ingredients: [
         { name: "pizza dough", amount: "1 pound" },
@@ -212,7 +211,6 @@ async function postRecipes() {
         imgUrl: "https://images.immediate.co.uk/production/volatile/sites/30/2010/09/Thai-green-curry-bb9f6ae.jpg",
       prepTime: 15,
       cookTime: 30,
-      totalTime: 45,
       servings: 4,
       ingredients: [
         {
@@ -251,7 +249,6 @@ async function postRecipes() {
         imgUrl: "https://img.taste.com.au/_1Oq7zhg/taste/2016/11/warm-roasted-vegetable-salad-32532-1.jpeg",
       prepTime: 20,
       cookTime: 30,
-      totalTime: 50,
       servings: 4,
       ingredients: [
         { name: "red onion", amount: "1/2, sliced" },
@@ -292,7 +289,6 @@ async function postRecipes() {
       imgUrl: "https://cdn.shopify.com/s/files/1/0205/9582/articles/20220211142347-margherita-9920_ba86be55-674e-4f35-8094-2067ab41a671.jpg?crop=center&height=915&v=1644590192&width=1200",
       prepTime: 20,
       cookTime: 15,
-      totalTime: 35,
       servings: 4,
       ingredients: [
         { name: "pizza dough", amount: "1 pound" },
@@ -322,7 +318,6 @@ async function postRecipes() {
         imgUrl: "https://images.immediate.co.uk/production/volatile/sites/30/2010/09/Thai-green-curry-bb9f6ae.jpg",
       prepTime: 15,
       cookTime: 30,
-      totalTime: 45,
       servings: 4,
       ingredients: [
         {
@@ -361,7 +356,6 @@ async function postRecipes() {
         imgUrl: "https://img.taste.com.au/_1Oq7zhg/taste/2016/11/warm-roasted-vegetable-salad-32532-1.jpeg",
       prepTime: 20,
       cookTime: 30,
-      totalTime: 50,
       servings: 4,
       ingredients: [
         { name: "red onion", amount: "1/2, sliced" },

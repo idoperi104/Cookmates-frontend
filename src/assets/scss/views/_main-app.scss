@@ -1,3 +1,4 @@
 .main-app{
     background-color: $clr-base-3;
+    min-height: calc(100vh - $app-header-height);
 }

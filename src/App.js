@@ -1,35 +1,36 @@
-import { Route, HashRouter as Router, Routes, Switch } from 'react-router-dom';
-import './assets/scss/global.scss'
-import { Home } from './views/Home';
-import { About } from './views/About';
-import { RecipeIndex } from './views/RecipeIndex';
-import { AppHeader } from './cmps/AppHeader';
+import { Route, HashRouter as Router, Routes, Switch } from "react-router-dom";
+import "./assets/scss/global.scss";
+import { Home } from "./views/Home";
+import { About } from "./views/About";
+import { RecipeIndex } from "./views/RecipeIndex";
+import { RecipeDetails } from "./views/RecipeDetails";
+import { RecipeEdit } from "./views/RecipeEdit";
+import { AppHeader } from "./cmps/AppHeader";
 
 function App() {
   return (
     <Router>
-        <section className="main-layout main-app">
-            <AppHeader />
+      <section className="app">
+        <AppHeader />
 
-            <main>
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/recipe" element={<RecipeIndex />} />
-                    {/* <Route path="/robot/edit/:id?" element={<RobotEdit />} /> */}
-                    {/* <Route path="/robot/:id" element={<RobotDetails />} /> */}
-                    <Route path="/about" element={<About />} />
-                </Routes>
-            </main>
+        <main className="main-layout main-app">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/recipe" element={<RecipeIndex />} />
+            <Route path="/recipe/edit/:id?" element={<RecipeEdit />} />
+            <Route path="/recipe/:id" element={<RecipeDetails />} />
+            <Route path="/about" element={<About />} />
+          </Routes>
+        </main>
 
-            {/* <footer>
+        {/* <footer>
                 <section className="container">
                     cookRights 2022 &copy;
                 </section>
             </footer> */}
-
-        </section>
+      </section>
     </Router>
-)
+  );
 }
 
 export default App;
