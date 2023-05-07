@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Cookmates/static/css/main.24f1d547.css",
+    "main.js": "/Cookmates/static/js/main.7418e832.js",
+    "static/js/787.a07dae3e.chunk.js": "/Cookmates/static/js/787.a07dae3e.chunk.js",
+    "static/media/logo.png": "/Cookmates/static/media/logo.fa0762befdbf4561850f.png",
+    "index.html": "/Cookmates/index.html",
+    "main.24f1d547.css.map": "/Cookmates/static/css/main.24f1d547.css.map",
+    "main.7418e832.js.map": "/Cookmates/static/js/main.7418e832.js.map",
+    "787.a07dae3e.chunk.js.map": "/Cookmates/static/js/787.a07dae3e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.24f1d547.css",
+    "static/js/main.7418e832.js"
+  ]
+}
