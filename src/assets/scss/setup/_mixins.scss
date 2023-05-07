@@ -1,48 +1,4 @@
-/* Breakpoint mixins - Mobile First */
-// @mixin for-narrow-layout {
-//     @media (min-width: $mobile-breakpoint) {
-//         @content;
-//     }
-// }
-
-// @mixin for-normal-layout {
-//     @media (min-width: $narrow-breakpoint) {
-//         @content;
-//     }
-// }
-
-// @mixin for-wide-layout {
-//     @media (min-width: $normal-breakpoint) {
-//         @content;
-//     }
-// }
-
-/* Desktop First */
-@mixin for-mobile-layout {
-    @media (max-width: $mobile-breakpoint) {
-        @content;
-    }
-}
-
-@mixin for-tablet-layout {
-    @media (max-width: $tablet-breakpoint) {
-        @content;
-    }
-}
-
-@mixin for-normal-layout {
-    @media (max-width: $normal-breakpoint) {
-        @content;
-    }
-}
-
-@mixin for-wide-layout {
-    @media (max-width: $wide-breakpoint) {
-        @content;
-    }
-}
-
-
+@use 'sass:map';
 // Mixin for removing hover effects on iphone screen
 @mixin hover-supported {
     @media not all and (pointer: coarse) {
@@ -56,7 +12,23 @@
     &::before {
         content: open-quote;
     }
+
     &::after {
         content: close-quote;
+    }
+}
+
+/* Breakpoint mixins */
+$breakpoints: (
+    medium: em(640px),
+    // medium: em(800px),
+    large: em(992px),
+);
+
+@mixin mq($key) {
+    $size: map.get($breakpoints, $key);
+
+    @media (min-width: $size) {
+        @content;
     }
 }

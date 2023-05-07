@@ -6,8 +6,10 @@ export function RecipePreview({ recipe, onRemoveRecipe }) {
     <article className="recipe-preview flex space-between">
       <Link to={`/recipe/${recipe._id}`} className="info">
         <img src={recipe.imgUrl} alt="" />
-        <h2>{recipe.title}</h2>
-        <h4>{recipe.description}</h4>
+        <div className="desc">
+          <h2>{recipe.title}</h2>
+          <h4>{recipe.description}</h4>
+        </div>
       </Link>
       <section className="actions">
         <button onClick={() => onRemoveRecipe(recipe._id)}>X</button>

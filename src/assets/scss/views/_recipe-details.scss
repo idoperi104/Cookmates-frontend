@@ -1,0 +1,164 @@
+.recipe-details {
+    margin: em(8px) auto 100px auto;
+
+    display: grid;
+    gap: em(8px);
+
+    .img-details {
+        width: 100%;
+        max-width: 480px;
+        justify-self: center;
+        height: 240px;
+        object-fit: cover;
+        border-radius: $border-radius-3;
+    }
+
+    .info {
+        // margin: 0 rem(16px);
+        display: flex;
+        flex-direction: column;
+        gap: rem(8px);
+
+        .title {
+            font-size: rem(20px);
+            font-weight: 600;
+            // margin-block: rem(8px);
+        }
+
+        .description {
+            font-size: rem(16px);
+        }
+
+        .bottom-info {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            font-size: rem(16px);
+            gap: rem(8px);
+        }
+    }
+
+    .categories-list {
+        display: flex;
+        gap: rem(4px);
+
+        .categories-preview {
+            background-color: $clr-base-4;
+            font-size: rem(14px);
+            padding: rem(4px) rem(8px);
+            border-radius: 100px;
+            color: $clr-base-2;
+        }
+
+    }
+
+    .ingredients-list {
+        .ingredients-preview {
+            display: grid;
+
+            .name {
+                font-size: rem(16px);
+
+                .amount {
+                    color: $clr-base-8;
+                }
+            }
+        }
+    }
+
+    .instructions-list {
+        .instructions-preview {
+            font-size: rem(16px);
+        }
+    }
+
+    .list-style {
+        h3 {
+            font-size: rem(18px);
+            margin-block-end: em(8px);
+            font-weight: 500;
+        }
+
+        &>*:nth-child(2n):not(h3) {
+            background-color: $clr-base-5;
+        }
+
+        &>*:nth-child(2n + 1):not(h3) {
+            background-color: $clr-base-6;
+        }
+
+        li {
+            height: em(60px);
+            padding: em(8px);
+        }
+    }
+
+
+    // mq
+    @include mq(medium) {
+        grid-template-columns: 5fr 2fr;
+        gap: em(16px);
+
+        margin: em(16px) auto 100px auto;
+
+        &>*:not(.info) {
+            grid-column: 1;
+        }
+
+        .img-details {
+            height: 440px;
+            max-width: none;
+        }
+
+        .info {
+            .title {
+                font-size: rem(28px);
+            }
+
+            .description {
+                font-size: rem(18px);
+            }
+
+            .bottom-info {
+                font-size: rem(16px);
+            }
+        }
+
+        .categories-list {
+            .categories-preview {
+                font-size: rem(16px);
+            }
+        }
+
+        .ingredients-list {
+            .ingredients-preview {
+                .name {
+                    font-size: rem(18px);
+                }
+            }
+        }
+
+        .instructions-list {
+            .instructions-preview {
+                font-size: rem(18px);
+            }
+        }
+
+        .list-style {
+            h3 {
+                font-size: rem(24px);
+            }
+        }
+
+    }
+
+    @include mq(large) {
+
+        .img-details {
+            height: 520px;
+        }
+
+
+    }
+}

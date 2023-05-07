@@ -1,27 +1,27 @@
-.container {
-    max-width: $normal-breakpoint;
-    margin: 0 auto;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding: 20px;
+// .container {
+//     max-width: $normal-breakpoint;
+//     margin: 0 auto;
+//     padding-left: 10px;
+//     padding-right: 10px;
+//     padding: 20px;
 
 
-    @include for-mobile-layout {
-        max-width: initial;
-    }
+//     @include for-mobile-layout {
+//         max-width: initial;
+//     }
 
-    @include for-tablet-layout {
-        max-width: $mobile-breakpoint;
-    }
+//     @include for-tablet-layout {
+//         max-width: $mobile-breakpoint;
+//     }
 
-    @include for-normal-layout {
-        max-width: $tablet-breakpoint;
-    }
+//     @include for-normal-layout {
+//         max-width: $tablet-breakpoint;
+//     }
 
-    @include for-wide-layout {
-        max-width: $normal-breakpoint;
-    }
-}
+//     @include for-wide-layout {
+//         max-width: $normal-breakpoint;
+//     }
+// }
 
 // GRIDS
 .simple-cards-grid {
@@ -31,23 +31,30 @@
 }
 
 
-.margin-inline{
+.margin-inline {
     margin-inline: $app-margin-size;
 }
 
-.padding-inline{
+.padding-inline {
     padding-inline: $app-margin-size;
 }
 
-.main-layout{
+.main-layout {
     display: grid;
-    grid-template-columns: $app-margin-size 1fr $app-margin-size;
-
-    & > *{
+    grid-template-columns: 8px 1fr 8px;
+    &>* {
         grid-column: 2;
     }
 
-    & > .full{
+    &>.full {
         grid-column: 1 / -1;
+    }
+
+    @include mq(medium) {
+        grid-template-columns: 16px 1fr 16px;
+    }
+    
+    @include mq(large) {
+        grid-template-columns: 1fr 960px 1fr;
     }
 }

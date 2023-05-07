@@ -1,12 +1,11 @@
 // Externals
 
 // Setup
-@import "setup/variables";
 @import "setup/functions";
 @import "setup/mixins";
+@import "setup/variables";
 
 // Basics
-@import "basics/variables";
 @import "basics/typography";
 @import "basics/base";
 @import "basics/helpers";
