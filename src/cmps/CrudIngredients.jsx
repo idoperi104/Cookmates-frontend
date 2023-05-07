@@ -3,7 +3,7 @@ import { useForm } from "../customHooks/useForm";
 import { recipeService } from "../services/recipe.service.local";
 
 export function CrudIngredients(props) {
-  const { title, type, list, onSetList } = props;
+  const { title, type, list, onSetList, labelName } = props;
   const [ingredients, setIngredients] = useState(list);
   const [ingredient, handleChange, setIngredient] = useForm(
     recipeService.getEmptyIngredient()
@@ -31,23 +31,32 @@ export function CrudIngredients(props) {
   const { name, amount, servingSize, description } = ingredient;
 
   return (
-    <div className="crud-obj">
-      <h3>crud-obj</h3>
-      <h3>{title}</h3>
-      <ul>
-        {ingredients.map((val, idx) => {
+    <div className="crud-ingredients">
+      <h3 className="title">{title}</h3>
+      <ul className="ingredients-list list-style">
+        {ingredients.map(({ name, amount, servingSize, description }, idx) => {
           return (
-            <li key={idx}>
-              <p>
-                {val.name}: {val.amount}
+            <li className="ingredients-preview" key={idx}>
+              <p className="name">
+                <span className="amount">
+                  {amount} {servingSize}{" "}
+                </span>
+                {name}
               </p>
-              <button onClick={() => onRemoveIngredient(idx)}>x</button>
+              <p className="description">{description}</p>
+              <button
+                className="btn-remove"
+                onClick={() => onRemoveIngredient(idx)}
+              >
+                x
+              </button>
             </li>
           );
         })}
       </ul>
 
-      <form onSubmit={onAddIngredient}>
+      <h3>Add a new {labelName}:</h3>
+      <form className="form-style" onSubmit={onAddIngredient}>
         <label htmlFor="name">name:</label>
         <input
           value={name}

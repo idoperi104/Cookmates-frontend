@@ -1,9 +1,10 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef } from "react";
 import { recipeService } from "../services/recipe.service.local";
 import { useNavigate, useParams } from "react-router-dom";
 import { useForm } from "../customHooks/useForm";
-import { DynamicForm } from "../cmps/DynamicForm";
+import { CrudList } from "../cmps/CrudList";
 import { CrudIngredients } from "../cmps/CrudIngredients";
+import { uploadService } from "../services/upload.service";
 
 export function RecipeEdit() {
   const [recipe, handleChange, setRecipe] = useForm(
@@ -12,6 +13,8 @@ export function RecipeEdit() {
 
   const params = useParams();
   const navigate = useNavigate();
+
+  const fileInputRef = useRef(null);
 
   useEffect(() => {
     loadRecipe();
@@ -43,6 +46,11 @@ export function RecipeEdit() {
     setRecipe({ ...recipe, [type]: list });
   }
 
+  async function handleFile({ target }) {
+    const imgUrl = await uploadService.uploadImg(target.files[0]);
+    setRecipe({ ...recipe, imgUrl });
+  }
+
   const {
     title,
     description,
@@ -58,77 +66,88 @@ export function RecipeEdit() {
   return (
     <section className="recipe-edit">
       <h2>{recipe._id ? "Edit" : "Add"} Recipe</h2>
-      <label htmlFor="title">title:</label>
-      <input
-        value={title}
-        onChange={handleChange}
-        type="text"
-        name="title"
-        id="title"
-      />
+      <form className="form-style">
+        <label htmlFor="title">title:</label>
+        <input
+          value={title}
+          onChange={handleChange}
+          type="text"
+          name="title"
+          id="title"
+        />
 
-      <label htmlFor="description">Description:</label>
-      <input
-        value={description}
-        onChange={handleChange}
-        type="text"
-        name="description"
-        id="description"
-      />
+        <label htmlFor="description">Description:</label>
+        <input
+          value={description}
+          onChange={handleChange}
+          type="text"
+          name="description"
+          id="description"
+        />
 
-      <label htmlFor="imgUrl">Image Url:</label>
-      <input
-        value={imgUrl}
-        onChange={handleChange}
-        type="text"
-        name="imgUrl"
-        id="imgUrl"
-      />
+        <label htmlFor="imgUrl">Image Url:</label>
+        <div className="img-uploader">
+          <img src={imgUrl || "../assets/imgs/drag.png"} alt="" />
+          <input
+            className="input-img"
+            onChange={handleFile}
+            ref={fileInputRef}
+            accept="image/*"
+            type="file"
+          />
+        </div>
+        <button onClick={() => fileInputRef.current.click()}>
+          Upload an image
+        </button>
 
-      <label htmlFor="cookTime">cookTime:</label>
-      <input
-        value={cookTime}
-        onChange={handleChange}
-        type="number"
-        name="cookTime"
-        id="cookTime"
-      />
+        <label htmlFor="cookTime">cookTime:</label>
+        <input
+          value={cookTime}
+          onChange={handleChange}
+          type="number"
+          name="cookTime"
+          id="cookTime"
+        />
 
-      <label htmlFor="prepTime">prepTime:</label>
-      <input
-        value={prepTime}
-        onChange={handleChange}
-        type="number"
-        name="prepTime"
-        id="prepTime"
-      />
+        <label htmlFor="prepTime">prepTime:</label>
+        <input
+          value={prepTime}
+          onChange={handleChange}
+          type="number"
+          name="prepTime"
+          id="prepTime"
+        />
 
-      <label htmlFor="servings">servings:</label>
-      <input
-        value={servings}
-        onChange={handleChange}
-        type="number"
-        name="servings"
-        id="servings"
-      />
+        <label htmlFor="servings">servings:</label>
+        <input
+          value={servings}
+          onChange={handleChange}
+          type="number"
+          name="servings"
+          id="servings"
+        />
+      </form>
 
-      <DynamicForm
-        title="categories:"
+      <CrudList
+        title="categories"
         list={categories}
         type="categories"
         onSetList={onSetList}
+        labelName="category"
       />
-      <DynamicForm
-        title="instructions:"
+      <CrudList
+        title="Instructions"
         list={instructions}
         type="instructions"
         onSetList={onSetList}
+        labelName="instruction"
       />
       <CrudIngredients
         title="ingredients:"
         list={ingredients}
         type="ingredients"
         onSetList={onSetList}
+        labelName="ingredient"
       />
 
       <button onClick={onSaveRecipe}>Save</button>

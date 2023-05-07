@@ -1,0 +1,23 @@
+.crud-list{
+    .crud-list-list {
+        .crud-list-preview {
+            // border: 1px solid red;
+            padding-inline: 0;
+
+            display: grid;
+            grid-template-columns: rem(48px) 1fr;
+            gap: rem(4px);
+
+            .btn-remove {
+                height: rem(32px);
+                width: rem(32px);
+
+                place-self: center;
+            }
+
+            .val{
+                align-self: center;
+            }
+        }
+    }
+}

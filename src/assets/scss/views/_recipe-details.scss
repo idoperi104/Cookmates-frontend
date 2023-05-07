@@ -33,7 +33,7 @@
             flex-grow: 1;
             display: flex;
             flex-direction: column;
-            justify-content: end;
+            justify-content: flex-end;
             font-size: rem(16px);
             gap: rem(8px);
         }
@@ -73,26 +73,7 @@
         }
     }
 
-    .list-style {
-        h3 {
-            font-size: rem(18px);
-            margin-block-end: em(8px);
-            font-weight: 500;
-        }
-
-        &>*:nth-child(2n):not(h3) {
-            background-color: $clr-base-5;
-        }
-
-        &>*:nth-child(2n + 1):not(h3) {
-            background-color: $clr-base-6;
-        }
-
-        li {
-            height: em(60px);
-            padding: em(8px);
-        }
-    }
+    
 
 
     // mq
@@ -144,13 +125,6 @@
                 font-size: rem(18px);
             }
         }
-
-        .list-style {
-            h3 {
-                font-size: rem(24px);
-            }
-        }
-
     }
 
     @include mq(large) {

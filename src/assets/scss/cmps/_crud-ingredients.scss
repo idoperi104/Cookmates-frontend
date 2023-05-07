@@ -1,0 +1,41 @@
+.crud-ingredients {
+    margin-top: rem(16px);
+
+    .title {
+        text-transform: capitalize;
+    }
+
+    .ingredients-list {
+        .ingredients-preview {
+            // border: 1px solid red;
+            padding-inline: 0;
+
+            display: grid;
+            grid-template-columns: rem(48px) 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-template-areas:
+            "b n"
+            "b d";
+            gap: rem(4px);
+
+            .name {
+                grid-area: n;
+                .amount {
+                    color: $clr-base-8;
+                }
+            }
+
+            .description {
+                grid-area: d;
+            }
+
+            .btn-remove {
+                grid-area: b;
+                height: rem(32px);
+                width: rem(32px);
+
+                place-self: center;
+            }
+        }
+    }
+}

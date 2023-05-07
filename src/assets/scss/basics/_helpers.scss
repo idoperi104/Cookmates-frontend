@@ -2,12 +2,15 @@
 .sm-font {
     font-size: rem(14px);
 }
+
 .md-font {
     font-size: rem(20px);
 }
+
 .lg-font {
     font-size: rem(30px);
 }
+
 .xl-font {
     font-size: rem(40px);
 }
@@ -18,7 +21,7 @@
     padding: 0;
     list-style-type: none;
 
-    & > li {
+    &>li {
         margin: 0;
         padding: 0;
     }
@@ -27,29 +30,37 @@
 // Positioning
 .flex {
     display: flex;
+
     &.column {
         flex-direction: column;
     }
+
     &.justify-center {
         justify-content: center;
     }
+
     &.align-center {
         align-items: center;
     }
+
     &.wrap {
         flex-wrap: wrap;
     }
+
     &.space-between {
         justify-content: space-between;
     }
+
     &.space-around {
         justify-content: space-around;
     }
+
     &.auto-center {
         justify-content: center;
         align-items: center;
     }
-    > *.full-grow {
+
+    >*.full-grow {
         flex: 1;
     }
 }
@@ -57,9 +68,11 @@
 .text-center {
     text-align: center;
 }
+
 .text-right {
     text-align: right;
 }
+
 .text-left {
     text-align: left;
 }
@@ -118,9 +131,11 @@
 .fast-trans {
     transition: 0.25s all;
 }
+
 .normal-trans {
     transition: 0.4s all;
 }
+
 .slow-trans {
     transition: 0.7s all;
 }
@@ -129,18 +144,23 @@
 .p5 {
     padding: 5px;
 }
+
 .p10 {
     padding: 10px;
 }
+
 .p20 {
     padding: 20px;
 }
+
 .m5 {
     margin: 5px;
 }
+
 .m10 {
     margin: 10px;
 }
+
 .m20 {
     margin: 20px;
 }
@@ -170,7 +190,7 @@
     width: 300px;
     margin: 15px auto;
 
-    & > *:not(:last-child) {
+    &>*:not(:last-child) {
         margin-bottom: 10px;
     }
 
@@ -185,5 +205,68 @@
         margin-top: 24px;
         color: red;
         font-size: 15px;
+    }
+}
+
+
+.list-style {
+    h3 {
+        font-size: rem(18px);
+        margin-block-end: em(8px);
+        font-weight: 500;
+    }
+
+    &>*:nth-child(2n):not(h3) {
+        background-color: $clr-base-5;
+    }
+
+    &>*:nth-child(2n + 1):not(h3) {
+        background-color: $clr-base-6;
+    }
+
+    li {
+        height: em(60px);
+        padding: em(8px);
+    }
+
+    @include mq(medium) {
+        h3 {
+            font-size: rem(24px);
+        }
+    }
+}
+
+.form-style {
+    display: grid;
+    gap: em(8px);
+
+    label {
+        font-size: rem(18px);
+        text-transform: capitalize
+    }
+
+    input {
+        height: rem(32px);
+        max-width: rem(480px);
+    }
+
+    select {
+        height: rem(32px);
+        max-width: rem(480px);
+    }
+
+    button {
+        height: rem(32px);
+        width: rem(64px);
+        border-radius: 1000px;
+        border: none;
+        background-color: $clr-base-8;
+        color: $clr-base-2;
+        transition: all .1s ease;
+        
+        &:hover{
+            background-color: $clr-base-4;
+        }
+
     }
 }

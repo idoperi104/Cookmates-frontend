@@ -1,4 +1,33 @@
 .recipe-edit {
     display: flex;
     flex-direction: column;
+    margin-top: rem(16px);
+    margin-bottom: rem(160px);
+
+    h2 {
+        font-size: rem(28px);
+        font-weight: 600;
+    }
+
+    .img-uploader {
+        // background-color: red;
+        position: relative;
+        width: rem(300px);
+        height: rem(200px);
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .input-img {
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            position: absolute;
+            left: 0;
+        }
+    }
+
 }
