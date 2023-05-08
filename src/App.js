@@ -10,6 +10,7 @@ import { LoginSignup } from "./views/LoginSignup";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { loadLoggedinUser } from "./store/actions/user.actions";
+import { UserPage } from "./views/UserPage";
 
 function App() {
   const dispatch = useDispatch();
@@ -30,6 +31,7 @@ function App() {
             <Route path="/recipe/:id" element={<RecipeDetails />} />
             <Route path="/about" element={<About />} />
             <Route path="/login" element={<LoginSignup />} />
+            <Route path="/user" element={<UserPage />} />
           </Routes>
         </main>
 

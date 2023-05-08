@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { login, logout, signup } from "../store/actions/user.actions";
+import { loadLoggedinUser, login, logout, signup } from "../store/actions/user.actions";
 import { useForm } from "../customHooks/useForm";
 import { userService } from "../services/user.service";
 
@@ -17,7 +17,10 @@ export function LoginSignup() {
     userService.getEmptySignupCred()
   );
 
-  useEffect(() => {}, [loggedinUser]);
+  useEffect(() => {
+    setLoginCred({ ...userService.getEmptyLoginCred() });
+    setSignupCred({ ...userService.getEmptySignupCred() });
+  }, [loggedinUser]);
 
   async function onLogin() {
     if (!loginCred.username || !loginCred.password) return;
@@ -38,12 +41,12 @@ export function LoginSignup() {
     }
   }
 
-  async function onLogout(){
+  async function onLogout() {
     try {
-        dispatch(logout());
-      } catch (err) {
-        console.error(err);
-      }
+      dispatch(logout());
+    } catch (err) {
+      console.error(err);
+    }
   }
 
   return loggedinUser ? (
@@ -53,7 +56,6 @@ export function LoginSignup() {
     </section>
   ) : (
     <section className="login-signup">
-
       <h3>Log in:</h3>
       <form onSubmit={onLogin} className="form-style">
         <label htmlFor="username">User name:</label>
@@ -62,15 +64,15 @@ export function LoginSignup() {
           onChange={handleChangeLogin}
           type="text"
           name="username"
-          id="username"
+          id="usernameLogin"
         />
         <label htmlFor="password">Password:</label>
         <input
           value={loginCred.password}
           onChange={handleChangeLogin}
-          type="text"
+          type="password"
           name="password"
-          id="password"
+          id="passwordLogin"
         />
         <button>Log in</button>
       </form>
@@ -83,7 +85,7 @@ export function LoginSignup() {
           onChange={handleChangeSignup}
           type="text"
           name="fullname"
-          id="fullname"
+          id="fullnameSignup"
         />
         <label htmlFor="username">User name:</label>
         <input
@@ -91,15 +93,15 @@ export function LoginSignup() {
           onChange={handleChangeSignup}
           type="text"
           name="username"
-          id="username"
+          id="usernameSignup"
         />
         <label htmlFor="password">Password:</label>
         <input
           value={signupCred.password}
           onChange={handleChangeSignup}
-          type="text"
+          type="password"
           name="password"
-          id="password"
+          id="passwordSignup"
         />
         <button>Sign up</button>
       </form>
