@@ -1,13 +1,15 @@
-import { useCallback, useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { loadLoggedinUser, login, logout, signup } from "../store/actions/user.actions";
+import { login, logout, signup } from "../store/actions/user.actions";
 import { useForm } from "../customHooks/useForm";
 import { userService } from "../services/user.service";
+import { useNavigate } from "react-router-dom";
 
 export function LoginSignup() {
   const loggedinUser = useSelector(
     (storeState) => storeState.userModule.loggedinUser
   );
+
   const dispatch = useDispatch();
 
   const [loginCred, handleChangeLogin, setLoginCred] = useForm(
@@ -22,16 +24,19 @@ export function LoginSignup() {
     setSignupCred({ ...userService.getEmptySignupCred() });
   }, [loggedinUser]);
 
-  async function onLogin() {
+  async function onLogin(ev) {
+    ev.preventDefault();
     if (!loginCred.username || !loginCred.password) return;
     try {
       dispatch(login({ ...loginCred }));
+      // navigate('/recipe')
     } catch (err) {
       console.error(err);
     }
   }
 
-  async function onSignUp() {
+  async function onSignUp(ev) {
+    ev.preventDefault();
     if (!signupCred.username || !signupCred.password || !signupCred.fullname)
       return;
     try {
@@ -41,21 +46,17 @@ export function LoginSignup() {
     }
   }
 
-  async function onLogout() {
-    try {
-      dispatch(logout());
-    } catch (err) {
-      console.error(err);
-    }
-  }
+  // async function onLogout() {
+  //   try {
+  //     dispatch(logout());
+  //   } catch (err) {
+  //     console.error(err);
+  //   }
+  // }
 
-  return loggedinUser ? (
+  return (
     <section className="login-signup">
-      <h2>{JSON.stringify(loggedinUser, null, 2)}</h2>
-      <button onClick={onLogout}>Log Out</button>
-    </section>
-  ) : (
-    <section className="login-signup">
+      <pre>{JSON.stringify(loginCred)}</pre>
       <h3>Log in:</h3>
       <form onSubmit={onLogin} className="form-style">
         <label htmlFor="username">User name:</label>

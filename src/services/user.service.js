@@ -191,12 +191,7 @@ async function loadUsers() {
     },
   ];
 
-  await userService.signup(users[0]);
-  await userService.signup(users[2]);
-  await userService.signup(users[3]);
-  await userService.signup(users[4]);
-  await userService.signup(users[5]);
-  await userService.signup(users[1]);
+  localStorage.setItem('user', JSON.stringify(users))
 }
 
 // ;(async () => {

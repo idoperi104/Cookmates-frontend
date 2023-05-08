@@ -5,10 +5,16 @@ import { useForm } from "../customHooks/useForm";
 import { CrudList } from "../cmps/CrudList";
 import { CrudIngredients } from "../cmps/CrudIngredients";
 import { uploadService } from "../services/upload.service";
+import dragImg from "../assets/imgs/drag.png";
+import { useSelector } from "react-redux";
 
 export function RecipeEdit() {
   const [recipe, handleChange, setRecipe] = useForm(
     recipeService.getEmptyRecipe()
+  );
+
+  const logggedinUser = useSelector(
+    (storeState) => storeState.userModule.loggedinUser
   );
 
   const params = useParams();
@@ -34,8 +40,16 @@ export function RecipeEdit() {
 
   async function onSaveRecipe(ev) {
     ev.preventDefault();
+
+    const { _id, fullname, imgUrl } = logggedinUser;
+    const createdBy = {
+      _id,
+      fullname,
+      imgUrl,
+    };
+
     try {
-      await recipeService.save({ ...recipe });
+      await recipeService.save({ ...recipe, createdBy });
       navigate("/recipe");
     } catch (error) {
       console.error("error:", error);
@@ -87,7 +101,7 @@ export function RecipeEdit() {
 
         <label htmlFor="imgUrl">Image Url:</label>
         <div className="img-uploader">
-          <img src={imgUrl || "../assets/imgs/drag.png"} alt="" />
+          <img src={imgUrl || dragImg} alt="" />
           <input
             className="input-img"
             onChange={handleFile}

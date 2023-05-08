@@ -4,11 +4,14 @@ export const ADD_RECIPE = 'ADD_RECIPE'
 export const REMOVE_RECIPE = 'REMOVE_RECIPE'
 export const UPDATE_RECIPE = 'UPDATE_RECIPE'
 export const SET_FILTER_BY = 'SET_FILTER_BY'
+export const SET_USER_RECIPES = 'SET_USER_RECIPES'
 
 const INITIAL_STATE = {
     recipes: null,
+    userRecipes: null,
     filterBy: {
-        title: ''
+        title: '',
+        userId: ''
     }
 }
 
@@ -19,6 +22,11 @@ export function recipeReducer(state = INITIAL_STATE, action = {}) {
             return {
                 ...state,
                 recipes: action.recipes
+            }
+        case SET_USER_RECIPES:
+            return {
+                ...state,
+                userRecipes: action.recipes
             }
         case ADD_RECIPE:
             return {

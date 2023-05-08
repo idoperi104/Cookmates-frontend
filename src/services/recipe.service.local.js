@@ -11,10 +11,13 @@ export const recipeService = {
   getEmptyRecipe,
   postRecipes,
   getEmptyIngredient,
+  getEmptyFilterBy,
 };
 window.rs = recipeService;
 
 async function query(filterBy = { title: "" }) {
+  console.log("filterBy: ", filterBy);
+
   var recipes = await storageService.query(STORAGE_KEY);
   if (!recipes || recipes.length === 0) {
     await postRecipes();
@@ -24,6 +27,11 @@ async function query(filterBy = { title: "" }) {
     const regex = new RegExp(filterBy.txt, "i");
     recipes = recipes.filter(
       (recipe) => regex.test(recipe.vendor) || regex.test(recipe.description)
+    );
+  }
+  if (filterBy.userId) {
+    recipes = recipes.filter(
+      (recipe) => recipe.createdBy._id === filterBy.userId
     );
   }
   return recipes;
@@ -67,6 +75,13 @@ function getEmptyIngredient() {
     amount: 0,
     servingSize: "",
     description: "",
+  };
+}
+
+function getEmptyFilterBy() {
+  return {
+    title: "",
+    userId: "",
   };
 }
 
@@ -159,6 +174,12 @@ async function postRecipes() {
         "Serve the spaghetti with the sauce on top.",
       ],
       categories: ["Italian", "Pasta", "Meat", "Dinner"],
+      createdBy: {
+        fullname: "Shahar Saadon",
+        _id: "u100",
+        imgUrl:
+          "https://res.cloudinary.com/dbf0uxszt/image/upload/v1679588778/shahar_wnnnux.png",
+      },
     },
     {
       title: "Garlic Roasted Broccoli",
@@ -209,6 +230,12 @@ async function postRecipes() {
         "Serve hot, garnished with additional black pepper if desired.",
       ],
       categories: ["Vegetables", "Side Dishes", "Healthy Eating"],
+      createdBy: {
+        fullname: "Tomer Huberman",
+        _id: "u102",
+        imgUrl:
+          "https://res.cloudinary.com/dbf0uxszt/image/upload/v1679588803/tomer_wm04gf.png",
+      },
     },
     {
       title: "Grilled Salmon with Lemon Butter",
@@ -271,6 +298,12 @@ async function postRecipes() {
         "Remove salmon from the grill and transfer to a serving platter. Pour lemon butter sauce over the top and serve immediately.",
       ],
       categories: ["Seafood", "Grilling", "Healthy"],
+      createdBy: {
+        fullname: "Ido Peri",
+        _id: "u101",
+        imgUrl:
+          "https://res.cloudinary.com/dbf0uxszt/image/upload/v1679588729/ido_wqplye.png",
+      },
     },
     {
       title: "Spaghetti Carbonara",
@@ -335,6 +368,12 @@ async function postRecipes() {
         "Serve hot, garnished with additional Parmesan cheese and black pepper if desired.",
       ],
       categories: ["Italian", "Pasta", "Comfort food"],
+      createdBy: {
+        fullname: "Puki Ka",
+        _id: "u103",
+        imgUrl:
+          "https://res.cloudinary.com/dbf0uxszt/image/upload/v1679588803/tomer_wm04gf.png",
+      },
     },
     {
       title: "Spaghetti Bolognese",
@@ -423,6 +462,12 @@ async function postRecipes() {
         "Serve the spaghetti with the sauce on top.",
       ],
       categories: ["Italian", "Pasta", "Meat", "Dinner"],
+      createdBy: {
+        fullname: "Shahar Saadon",
+        _id: "u100",
+        imgUrl:
+          "https://res.cloudinary.com/dbf0uxszt/image/upload/v1679588778/shahar_wnnnux.png",
+      },
     },
     {
       title: "Garlic Roasted Broccoli",
@@ -473,6 +518,12 @@ async function postRecipes() {
         "Serve hot, garnished with additional black pepper if desired.",
       ],
       categories: ["Vegetables", "Side Dishes", "Healthy Eating"],
+      createdBy: {
+        fullname: "Tomer Huberman",
+        _id: "u102",
+        imgUrl:
+          "https://res.cloudinary.com/dbf0uxszt/image/upload/v1679588803/tomer_wm04gf.png",
+      },
     },
     {
       title: "Grilled Salmon with Lemon Butter",
@@ -535,6 +586,12 @@ async function postRecipes() {
         "Remove salmon from the grill and transfer to a serving platter. Pour lemon butter sauce over the top and serve immediately.",
       ],
       categories: ["Seafood", "Grilling", "Healthy"],
+      createdBy: {
+        fullname: "Ido Peri",
+        _id: "u101",
+        imgUrl:
+          "https://res.cloudinary.com/dbf0uxszt/image/upload/v1679588729/ido_wqplye.png",
+      },
     },
     {
       title: "Spaghetti Carbonara",
@@ -599,6 +656,12 @@ async function postRecipes() {
         "Serve hot, garnished with additional Parmesan cheese and black pepper if desired.",
       ],
       categories: ["Italian", "Pasta", "Comfort food"],
+      createdBy: {
+        fullname: "Puki Ka",
+        _id: "u103",
+        imgUrl:
+          "https://res.cloudinary.com/dbf0uxszt/image/upload/v1679588803/tomer_wm04gf.png",
+      },
     },
   ];
 

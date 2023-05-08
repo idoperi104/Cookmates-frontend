@@ -257,12 +257,14 @@
 
     button {
         height: rem(32px);
-        width: rem(64px);
+        min-width: rem(64px);
+        width: fit-content;
         border-radius: 1000px;
         border: none;
         background-color: $clr-base-8;
         color: $clr-base-2;
         transition: all .1s ease;
+        padding-inline: rem(12px);
         
         &:hover{
             background-color: $clr-base-4;

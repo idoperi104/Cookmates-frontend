@@ -1,5 +1,5 @@
 import { recipeService } from "../../services/recipe.service.local"
-import { REMOVE_RECIPE, SET_FILTER_BY, SET_RECIPES } from "../reducers/recipe.reducer"
+import { REMOVE_RECIPE, SET_FILTER_BY, SET_RECIPES, SET_USER_RECIPES } from "../reducers/recipe.reducer"
 
 export function loadRecipes() {
     return async (dispatch, getState) => {
@@ -7,6 +7,21 @@ export function loadRecipes() {
             const recipes = await recipeService.query(getState().recipeModule.filterBy)
             const action = {
                 type: SET_RECIPES,
+                recipes
+            }
+            dispatch(action)
+        } catch (error) {
+            console.log('error:', error)
+        }
+    }
+}
+
+export function loadUserRecipes() {
+    return async (dispatch, getState) => {
+        try {
+            const recipes = await recipeService.query(getState().recipeModule.filterBy)
+            const action = {
+                type: SET_USER_RECIPES,
                 recipes
             }
             dispatch(action)
