@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { loadRecipes, loadUserRecipes, removeRecipe, setFilterBy } from '../store/actions/recipe.actions'
-import { RecipeList } from '../cmps/RecipeList'
+import { loadUserRecipes, removeRecipe, removeUserRecipe, setFilterBy } from '../store/actions/recipe.actions'
+import { UserRecipeList } from '../cmps/UserRecipeList'
 
 export function UserRecipes({userId}) {
     // console.log("userId: ", userId);
@@ -13,23 +13,22 @@ export function UserRecipes({userId}) {
         dispatch(setFilterBy({userId}))
         dispatch(loadUserRecipes())
     }, [])
-
+    
     const onRemoveRecipe = useCallback(async (recipeId) => {
         try {
             dispatch(removeRecipe(recipeId))
+            dispatch(removeUserRecipe(recipeId))
         } catch (error) {
             console.log('error:', error)
         }
     }, [])
 
 
-
-
     if (!recipes) return <div>Loading...</div>
+    if (recipes.length === 0) return <div>there are no recipes...</div>
     return (
         <section className='recipe-index'>
-            {/* <RecipeFilter filterBy={filterBy} onChangeFilter={onChangeFilter} /> */}
-            <RecipeList recipes={recipes} onRemoveRecipe={onRemoveRecipe} />
+            <UserRecipeList recipes={recipes} onRemoveRecipe={onRemoveRecipe} />
         </section>
     )
 }

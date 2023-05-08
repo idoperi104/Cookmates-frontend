@@ -11,10 +11,6 @@ export function RecipePreview({ recipe, onRemoveRecipe }) {
           <h4>{recipe.description}</h4>
         </div>
       </Link>
-      <section className="actions">
-        <button onClick={() => onRemoveRecipe(recipe._id)}>X</button>
-        <Link to={`/recipe/edit/${recipe._id}`}>Edit</Link>
-      </section>
     </article>
   );
 }

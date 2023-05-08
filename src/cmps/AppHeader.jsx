@@ -10,7 +10,7 @@ export function AppHeader() {
       <nav className="main-nav flex">
         <NavLink to="/">Home</NavLink>
         <NavLink to="/recipe">Recipes</NavLink>
-        <NavLink to="/about">About</NavLink>
+        {/* <NavLink to="/about">About</NavLink> */}
         {/* <NavLink to="/login">Log in</NavLink> */}
         <NavLink to="/user">My Profile</NavLink>
       </nav>

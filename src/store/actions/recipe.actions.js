@@ -1,5 +1,5 @@
 import { recipeService } from "../../services/recipe.service.local"
-import { REMOVE_RECIPE, SET_FILTER_BY, SET_RECIPES, SET_USER_RECIPES } from "../reducers/recipe.reducer"
+import { REMOVE_RECIPE, SET_FILTER_BY, SET_RECIPES, SET_USER_RECIPES, REMOVE_USER_RECIPE } from "../reducers/recipe.reducer"
 
 export function loadRecipes() {
     return async (dispatch, getState) => {
@@ -36,6 +36,18 @@ export function removeRecipe(recipeId) {
         try {
             await recipeService.remove(recipeId)
             const action = { type: REMOVE_RECIPE, recipeId }
+            dispatch(action)
+            return 'Removed!'
+        } catch (error) {
+            console.log('error:', error)
+        }
+    }
+}
+
+export function removeUserRecipe(recipeId) {
+    return async (dispatch) => {
+        try {
+            const action = { type: REMOVE_USER_RECIPE, recipeId }
             dispatch(action)
             return 'Removed!'
         } catch (error) {

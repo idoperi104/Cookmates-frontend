@@ -18,6 +18,7 @@
 @import "views/recipe-index";
 @import "views/recipe-details";
 @import "views/recipe-edit";
+@import "views/user-page";
 
 // Components
 @import "cmps/recipe-preview";
@@ -25,3 +26,8 @@
 @import "cmps/app-header";
 @import "cmps/crud-ingredients";
 @import "cmps/crud-list";
+
+
+@import "cmps/user-recipes";
+@import "cmps/user-recipe-list";
+@import "cmps/user-recipe-preview";
