@@ -16,6 +16,28 @@ export function loadRecipes() {
     }
 }
 
+export function removeRecipe(recipeId) {
+    return async (dispatch) => {
+        try {
+            await recipeService.remove(recipeId)
+            const action = { type: REMOVE_RECIPE, recipeId }
+            dispatch(action)
+            return 'Removed!'
+        } catch (error) {
+            console.log('error:', error)
+        }
+    }
+}
+
+// Filter by:
+
+export function setFilterBy(filterBy) {
+    return (dispatch) => {
+        dispatch({ type: SET_FILTER_BY, filterBy })
+    }
+}
+
+// User recipes:
 export function loadUserRecipes() {
     return async (dispatch, getState) => {
         try {
@@ -25,19 +47,6 @@ export function loadUserRecipes() {
                 recipes
             }
             dispatch(action)
-        } catch (error) {
-            console.log('error:', error)
-        }
-    }
-}
-
-export function removeRecipe(recipeId) {
-    return async (dispatch) => {
-        try {
-            await recipeService.remove(recipeId)
-            const action = { type: REMOVE_RECIPE, recipeId }
-            dispatch(action)
-            return 'Removed!'
         } catch (error) {
             console.log('error:', error)
         }
@@ -56,8 +65,3 @@ export function removeUserRecipe(recipeId) {
     }
 }
 
-export function setFilterBy(filterBy) {
-    return (dispatch) => {
-        dispatch({ type: SET_FILTER_BY, filterBy })
-    }
-}

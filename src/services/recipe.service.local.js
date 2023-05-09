@@ -16,24 +16,27 @@ export const recipeService = {
 window.rs = recipeService;
 
 async function query(filterBy = { title: "" }) {
-  console.log("filterBy: ", filterBy);
+  // console.log("filterBy: ", filterBy);
 
   var recipes = await storageService.query(STORAGE_KEY);
   if (!recipes || recipes.length === 0) {
     await postRecipes();
     recipes = await storageService.query(STORAGE_KEY);
   }
-  if (filterBy.txt) {
-    const regex = new RegExp(filterBy.txt, "i");
-    recipes = recipes.filter(
-      (recipe) => regex.test(recipe.vendor) || regex.test(recipe.description)
-    );
+  if (filterBy.title) {
+    const regex = new RegExp(filterBy.title, "i");
+    recipes = recipes.filter((recipe) => regex.test(recipe.title));
   }
   if (filterBy.userId) {
     recipes = recipes.filter(
       (recipe) => recipe.createdBy._id === filterBy.userId
     );
   }
+  if (filterBy.ids) {
+    // const {ids} = filterBy
+    recipes = recipes.filter((recipe) => filterBy.ids.includes(recipe._id));
+  }
+
   return recipes;
 }
 
@@ -82,6 +85,7 @@ function getEmptyFilterBy() {
   return {
     title: "",
     userId: "",
+    likedRecipes: null,
   };
 }
 

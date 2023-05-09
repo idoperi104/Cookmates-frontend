@@ -36,10 +36,13 @@ export function removeUser(userId) {
 }
 
 export function updateUser(user) {
+  console.log("user: ", user);
   return async (dispatch) => {
     try {
       await userService.update(user);
-      const action = { type: UPDATE_USER, user };
+      // const action = { type: UPDATE_USER, user };
+      // dispatch(action);
+      const action = { type: SET_LOGGEDIN_USER, user };
       dispatch(action);
     } catch (error) {
       console.log("error:", error);
@@ -96,5 +99,3 @@ export function loadLoggedinUser() {
     }
   };
 }
-
-

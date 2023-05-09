@@ -4,6 +4,8 @@ import { Link, useNavigate } from "react-router-dom";
 import { LoginSignup } from "./LoginSignup";
 import { logout } from "../store/actions/user.actions";
 import { UserRecipes } from "../cmps/UserRecipes";
+import { LikedRecipes } from "../cmps/LikedRecipes";
+import { DynamicRecipes } from "../cmps/DynamicRecipes";
 
 export function UserPage() {
   const user = useSelector((storeState) => storeState.userModule.loggedinUser);
@@ -28,9 +30,14 @@ export function UserPage() {
         <Link to="/recipe/edit">Add Recipe</Link>
       </section>
 
-      <section className="my-recipes">
+      <section className="liked-section">
+        <h2>Liked recipes:</h2>
+        <DynamicRecipes filterBy={{ ids: ["JypGB", "Vk4NP"] }} />
+      </section>
+
+      <section className="my-recipes-section">
         <h2>My recipes:</h2>
-        <UserRecipes userId={user._id}/>
+        <UserRecipes userId={user._id} />
       </section>
 
       <button onClick={onLogout}>Log Out</button>

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export function RecipePreview({ recipe, onRemoveRecipe }) {
+export function RecipePreview({ recipe, onToggleLiked }) {
   return (
     <article className="recipe-preview flex space-between">
       <Link to={`/recipe/${recipe._id}`} className="info">
@@ -11,6 +11,7 @@ export function RecipePreview({ recipe, onRemoveRecipe }) {
           <h4>{recipe.description}</h4>
         </div>
       </Link>
+        <button onClick={() => onToggleLiked(recipe._id)}>like</button>
     </article>
   );
 }
