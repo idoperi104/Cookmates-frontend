@@ -1,7 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export function RecipePreview({ recipe, onToggleLiked }) {
+export function RecipePreview({ recipe, onToggleLike, likedIds }) {
+  const getLikedStyle = () => {
+    return likedIds.includes(recipe._id)
+    ? {'backgroundColor' : 'red'}
+    : {}
+  }
+
   return (
     <article className="recipe-preview flex space-between">
       <Link to={`/recipe/${recipe._id}`} className="info">
@@ -11,7 +17,7 @@ export function RecipePreview({ recipe, onToggleLiked }) {
           <h4>{recipe.description}</h4>
         </div>
       </Link>
-        <button onClick={() => onToggleLiked(recipe._id)}>like</button>
+        <button style={getLikedStyle()} onClick={() => onToggleLike(recipe._id)}>like</button>
     </article>
   );
 }

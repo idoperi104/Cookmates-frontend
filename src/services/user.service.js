@@ -57,9 +57,9 @@ function remove(userId) {
 }
 
 async function update(user) {
+  console.log("user: ", user);
   // if (!getLoggedinUser) return;
   user = await storageService.put("user", user);
-  console.log("user-----: ", user);
 
   // user = await httpService.put(`user/${user._id}`, user)
 

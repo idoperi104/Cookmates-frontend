@@ -36,14 +36,35 @@ export function removeUser(userId) {
 }
 
 export function updateUser(user) {
-  console.log("user: ", user);
+  console.log("user: ----", user);
   return async (dispatch) => {
     try {
       await userService.update(user);
-      // const action = { type: UPDATE_USER, user };
-      // dispatch(action);
       const action = { type: SET_LOGGEDIN_USER, user };
       dispatch(action);
+    } catch (error) {
+      console.log("error:", error);
+    }
+  };
+}
+
+export function toggleLike(recipeId) {
+  return async (dispatch, getState) => {
+    const loggedinUser = getState().userModule.loggedinUser;
+    if (!loggedinUser) return;
+
+    const likedIds = loggedinUser.likedRecipesIds || [];
+    const idx = likedIds.findIndex((id) => id === recipeId);
+    if (idx === -1) likedIds.push(recipeId);
+    else likedIds.splice(idx, 1);
+
+    const user = { ...loggedinUser, likedRecipesIds: likedIds }
+    try {
+      const action = { type: SET_LOGGEDIN_USER, user };
+      dispatch(action);
+      await userService.update(user);
+      // const action = { type: UPDATE_USER, user };
+      // dispatch(action);
     } catch (error) {
       console.log("error:", error);
     }
