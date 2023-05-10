@@ -4,11 +4,9 @@ import { useForm } from "../customHooks/useForm";
 import { useFormRegister } from "../customHooks/useFormRegister";
 
 export function _SearchBar({ filterBy, onChangeFilter }) {
-  console.log("render");
-  console.log("filterBy: ", filterBy);
   const [register] = useFormRegister({ ...filterBy }, onChangeFilter);
 
-  
+
 
   return (
     <form className="search-bar">

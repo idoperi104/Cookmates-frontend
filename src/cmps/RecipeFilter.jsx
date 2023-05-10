@@ -4,6 +4,7 @@ import { useForm } from "../customHooks/useForm";
 import { useFormRegister } from "../customHooks/useFormRegister";
 
 function _RecipeFilter({ filterBy, onChangeFilter }) {
+  const [register] = useFormRegister({ ...filterBy }, onChangeFilter);
 
   const handelCheckedChange = ({ target }, key) => {
     const { value, checked } = target;
@@ -19,14 +20,24 @@ function _RecipeFilter({ filterBy, onChangeFilter }) {
     onChangeFilter({ ...filterBy, [key]: values });
   };
 
+  // const checkIfChecked = (key, val) => {
+  //   return filterBy[key].includes(val)
+  // };
+
   return (
-    <form className="recipe-filter">
+    <form className="recipe-filter form-style">
+      <label htmlFor="prepTime">prepTime</label>
+      <input {...register("prepTime", "number")} />
+
+      <label htmlFor="cookTime">cookTime</label>
+      <input {...register("cookTime", "number")} />
 
       <input
         type="checkbox"
         id="Pasta"
         name="Pasta"
         value={"Pasta"}
+        // checked={checkIfChecked("categories", "Pasta")}
         onChange={(ev) => handelCheckedChange(ev, "categories")}
       />
       <label htmlFor="Pasta">Pasta</label>
@@ -35,6 +46,7 @@ function _RecipeFilter({ filterBy, onChangeFilter }) {
         id="Side Dishes"
         name="Side Dishes"
         value={"Side Dishes"}
+        // checked={checkIfChecked("categories", "Side Dishes")}
         onChange={(ev) => handelCheckedChange(ev, "categories")}
       />
       <label htmlFor="Side Dishes">Side Dishes</label>

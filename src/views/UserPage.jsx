@@ -5,13 +5,19 @@ import { LoginSignup } from "./LoginSignup";
 import { logout } from "../store/actions/user.actions";
 import { UserRecipes } from "../cmps/UserRecipes";
 import { DynamicRecipes } from "../cmps/DynamicRecipes";
+import { setFilterBy } from "../store/actions/recipe.actions";
+import { recipeService } from "../services/recipe.service.local";
 
 export function UserPage() {
   const user = useSelector((storeState) => storeState.userModule.loggedinUser);
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  // useEffect(() => {}, [user]);
+  useEffect(() => {
+    return () => {
+      dispatch(setFilterBy(recipeService.getEmptyFilterBy()));
+    }
+  }, []);
 
   async function onLogout() {
     try {

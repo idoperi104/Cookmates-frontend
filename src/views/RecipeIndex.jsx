@@ -25,6 +25,10 @@ export function RecipeIndex() {
   useEffect(() => {
     // dispatch(setFilterBy(recipeService.getEmptyFilterBy()));
     dispatch(loadRecipes());
+
+    return () => {
+      dispatch(setFilterBy(recipeService.getEmptyFilterBy()));
+    }
   }, []);
 
   const onChangeFilter = useCallback((filterBy) => {

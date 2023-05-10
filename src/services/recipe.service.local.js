@@ -36,12 +36,15 @@ async function query(filterBy = { title: "" }) {
     // const {ids} = filterBy
     recipes = recipes.filter((recipe) => filterBy.ids.includes(recipe._id));
   }
-  if (filterBy.categories.length) {
+  if (filterBy.categories?.length) {
     recipes = recipes.filter((recipe) =>
     filterBy.categories.every((category) =>
         recipe.categories.includes(category)
       )
     );
+  }
+  if (filterBy.prepTime){
+    recipes = recipes.filter((recipe) => filterBy.prepTime <= recipe.prepTime);
   }
 
   return recipes;

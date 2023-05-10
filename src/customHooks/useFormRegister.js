@@ -2,9 +2,7 @@ import { useState } from "react";
 import { useEffectUpdate } from "./useEffectUpdate";
 
 export function useFormRegister(initialFields, cb = () => {}) {
-  console.log("initialFields: ", initialFields);
   const [fields, setFields] = useState(initialFields);
-  console.log("fields: ", fields);
 
   useEffectUpdate(() => {
     cb(fields);
@@ -26,9 +24,8 @@ export function useFormRegister(initialFields, cb = () => {}) {
         break;
     }
 
-    setFields((prevFields) => ({ ...prevFields, [field]: value }));
+    setFields({ ...initialFields, [field]: value });
   }
-  // <input onChange={handleChange} value={filterBy.model} type="text" name="model" id="model" />
 
   function register(field, type = "text") {
     return {
