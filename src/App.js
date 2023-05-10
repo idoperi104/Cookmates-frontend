@@ -15,8 +15,8 @@ import { UserPage } from "./views/UserPage";
 function App() {
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(loadLoggedinUser())
-  }, [])
+    dispatch(loadLoggedinUser());
+  }, []);
 
   return (
     <Router>

@@ -1,15 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHeart } from "@fortawesome/free-solid-svg-icons";
+
 export function RecipePreview({ recipe, onToggleLike, likedIds }) {
-  const getLikedStyle = () => {
-    return likedIds.includes(recipe._id)
-    ? {'backgroundColor' : 'red'}
-    : {}
-  }
+  const getLikedClass = () => {
+    return likedIds.includes(recipe._id) ? "liked" : "";
+  };
 
   return (
-    <article className="recipe-preview flex space-between">
+    <article className={"recipe-preview flex space-between " + getLikedClass()}>
       <Link to={`/recipe/${recipe._id}`} className="info">
         <img src={recipe.imgUrl} alt="" />
         <div className="desc">
@@ -17,7 +18,13 @@ export function RecipePreview({ recipe, onToggleLike, likedIds }) {
           <h4>{recipe.description}</h4>
         </div>
       </Link>
-        <button style={getLikedStyle()} onClick={() => onToggleLike(recipe._id)}>like</button>
+      <button
+        className="btn-like"
+        onClick={() => onToggleLike(recipe._id)}
+      >
+        {/* <FontAwesomeIcon icon={faHeart} /> */}
+        <FontAwesomeIcon icon={faHeart} />
+      </button>
     </article>
   );
 }

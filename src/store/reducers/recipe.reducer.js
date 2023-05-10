@@ -12,6 +12,9 @@ const INITIAL_STATE = {
   filterBy: {
     title: "",
     userId: "",
+    categories: [],
+    prepTime: 0,
+    cookTime: 0,
   },
 };
 

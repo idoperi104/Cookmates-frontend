@@ -36,6 +36,13 @@ async function query(filterBy = { title: "" }) {
     // const {ids} = filterBy
     recipes = recipes.filter((recipe) => filterBy.ids.includes(recipe._id));
   }
+  if (filterBy.categories.length) {
+    recipes = recipes.filter((recipe) =>
+    filterBy.categories.every((category) =>
+        recipe.categories.includes(category)
+      )
+    );
+  }
 
   return recipes;
 }
@@ -85,7 +92,9 @@ function getEmptyFilterBy() {
   return {
     title: "",
     userId: "",
-    likedRecipes: null,
+    categories: [],
+    prepTime: 0,
+    cookTime: 0,
   };
 }
 

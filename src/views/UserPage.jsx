@@ -4,7 +4,6 @@ import { Link, useNavigate } from "react-router-dom";
 import { LoginSignup } from "./LoginSignup";
 import { logout } from "../store/actions/user.actions";
 import { UserRecipes } from "../cmps/UserRecipes";
-import { LikedRecipes } from "../cmps/LikedRecipes";
 import { DynamicRecipes } from "../cmps/DynamicRecipes";
 
 export function UserPage() {
@@ -12,7 +11,7 @@ export function UserPage() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  useEffect(() => {}, [user]);
+  // useEffect(() => {}, [user]);
 
   async function onLogout() {
     try {
@@ -32,7 +31,7 @@ export function UserPage() {
 
       <section className="liked-section">
         <h2>Liked recipes:</h2>
-        <DynamicRecipes filterBy={{ ids: ["JypGB", "Vk4NP"] }} />
+        <DynamicRecipes filterBy={{ ids: user.likedRecipesIds }} />
       </section>
 
       <section className="my-recipes-section">
