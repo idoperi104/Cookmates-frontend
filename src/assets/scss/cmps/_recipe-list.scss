@@ -5,14 +5,10 @@
     column-gap: em(10px);
     margin-top: 16px;
     margin-inline: auto;
-    
-    
-    
+
     @include mq(mq-768) {
         max-width: em(924px);
         grid-template-columns: repeat(3, 1fr);
-
-
     }
 
     @include mq(mq-1200) {

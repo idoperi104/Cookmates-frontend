@@ -1,0 +1,82 @@
+.dynamic-recipes {
+    position: relative;
+    margin-inline: em(16px);
+
+    .sub-title{
+        margin-top: rem(16px);
+        text-align: center;
+        font-weight: 600;
+        text-transform: capitalize;
+    }
+    
+    .title{
+        margin: 0 0 16px 0;
+        text-align: center;
+        font-size: 28px;
+        font-weight: 600;
+        text-transform: capitalize;
+    }
+
+    @include mq(mq-768) {
+        .sub-title{
+            margin-top: rem(30px);
+        }
+        
+        .title{
+            margin: 0 0 32px 0;
+            font-size: 40px;
+        }
+
+    }
+}
+
+.dynamic-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: em(15px);
+    column-gap: em(10px);
+    margin-block-start: 16px;
+    margin-inline: auto;
+
+    &.list-4 {
+        grid-template-columns: repeat(3, 1fr);
+
+        .dynamic-preview {
+            height: 200px;
+
+            .cover {
+
+                height: em(120px);
+            }
+            img {
+                height: em(120px);
+            }
+            h2 {
+                font-size: 16px;
+            }
+            h4 {
+                display: none;
+            }
+        }
+    }
+
+
+    @include mq(mq-768) {
+        max-width: em(924px);
+        grid-template-columns: repeat(3, 1fr);
+        margin-block-end: 60px;
+
+        &.list-4 {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+    }
+
+    @include mq(mq-1200) {
+        max-width: 1200px;
+        row-gap: em(30px);
+        column-gap: em(20px);
+        margin-top: 0;
+
+    }
+}

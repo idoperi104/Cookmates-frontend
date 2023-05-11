@@ -7,7 +7,7 @@ import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { toggleLike } from "../store/actions/user.actions";
 import { useDispatch, useSelector } from "react-redux";
 
-export function DynamicRecipes({ title, filterBy }) {
+export function DynamicRecipes({ title, subTitle, filterBy, numOfColumns = "3" }) {
   const [recipes, setRecipes] = useState(null);
   const dispatch = useDispatch();
 
@@ -36,23 +36,29 @@ export function DynamicRecipes({ title, filterBy }) {
   if (recipes.length === 0) return <div>there are no recipes...</div>;
   return (
     <section className="dynamic-recipes">
-      <h2>{title}</h2>
-      <section className="recipe-list">
+      <h3 className="sub-title">{subTitle}</h3>
+      <h2 className="title">{title}</h2>
+      <section className={"dynamic-list list-" + numOfColumns}>
         {recipes.map((recipe) => (
           <article
             key={recipe._id}
-            className={"recipe-preview " + getLikedClass(recipe._id)}
+            className={
+              "dynamic-preview recipe-preview flex space-between " +
+              getLikedClass(recipe._id)
+            }
           >
             <Link to={`/recipe/${recipe._id}`} className="info">
               <img src={recipe.imgUrl} alt="" />
-              <h3 className="title">{recipe.title}</h3>
-              <h4 className="description">{recipe.description}</h4>
+              <div className="desc">
+                <h2>{recipe.title}</h2>
+                <h4>{recipe.description}</h4>
+              </div>
+              <div className="cover"></div>
             </Link>
             <button
               className="btn-like"
               onClick={() => onToggleLike(recipe._id)}
             >
-              {/* <FontAwesomeIcon icon={faHeart} /> */}
               <FontAwesomeIcon icon={faHeart} />
             </button>
           </article>
