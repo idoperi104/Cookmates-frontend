@@ -9,13 +9,14 @@
 
     img {
         width: 100%;
-        height: em(180px);
+        height: em(150px);
 
         object-fit: cover;
     }
 
     .info {
         flex-grow: 1;
+        position: relative;
 
         .desc {
             h2 {
@@ -31,9 +32,10 @@
     }
 
     .cover {
-        width: calc(100% - 30px);
-        height: em(180px);
+        width: calc(100%);
+        height: em(150px);
         position: absolute;
+        top: 0;
         background-color: #3d3d3d15;
     }
 
@@ -44,7 +46,6 @@
         width: rem(40px);
         height: rem(40px);
         background-color: transparent;
-        z-index: 1;
 
         svg {
             width: 100%;

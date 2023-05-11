@@ -5,24 +5,24 @@
     // margin-inline: em(16px);
     padding: em(15px);
     max-width: em(924px);
-
-
+    height: em(150px);
 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    margin-inline: auto;
+    margin:  auto;
 
+    // visibility: hidden;
 
-    
-    
-    
-    
-    
+    &.is-hidden {
+        display: none;
+    }
+
     .check-section {}
-    
-    @include mq(mq-1024) {
-        // grid-template-columns: repeat(4, 1fr);
 
+    @include mq(mq-540){
+        &.is-hidden {
+            display: grid;
+        }
     }
 
     @include mq(mq-1200) {
@@ -32,8 +32,25 @@
         top: 90px;
         z-index: 1;
 
+        margin:  0;
         margin-inline-start: em(20px);
+        // margin-inline-start: em(20px);
 
         height: calc(100vh - 106px);
+    }
+}
+
+.btn-toggle-filter {
+    position: absolute;
+    top: 16px;
+    height: rem(48px);
+    width: rem(48px);
+    background-color: $clr-base-1;
+    border: none;
+    border-radius: $border-radius-5;
+
+
+    @include mq(mq-540){
+        display: none;
     }
 }

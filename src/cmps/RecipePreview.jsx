@@ -17,15 +17,12 @@ export function RecipePreview({ recipe, onToggleLike, likedIds }) {
           <h2>{recipe.title}</h2>
           <h4>{recipe.description}</h4>
         </div>
+        <div className="cover"></div>
       </Link>
-      <button
-        className="btn-like"
-        onClick={() => onToggleLike(recipe._id)}
-      >
+      <button className="btn-like" onClick={() => onToggleLike(recipe._id)}>
         {/* <FontAwesomeIcon icon={faHeart} /> */}
         <FontAwesomeIcon icon={faHeart} />
       </button>
-      <div className="cover"></div>
     </article>
   );
 }

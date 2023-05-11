@@ -1,11 +1,11 @@
 .recipe-index {
 
-    display: grid;
-    grid-template-rows: em(68px) em(150px) 1fr;
-    grid-template-areas:
-        "s"
-        "f"
-        "l";
+    // display: grid;
+    // grid-template-rows: em(68px) em(150px) 1fr;
+    // grid-template-areas:
+    //     "s"
+    //     "f"
+    //     "l";
         
     position: relative;
     margin-inline: em(16px);
@@ -26,6 +26,7 @@
 
 
     @include mq(mq-1200) {
+        display: grid;
         grid-template-rows: em(80px) 1fr;
         grid-template-columns: em(924px) em(244px);
         grid-template-areas:

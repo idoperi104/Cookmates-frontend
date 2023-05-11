@@ -1,6 +1,7 @@
 .search-bar {
     // text-align: center;
-    // margin: rem(16px) 0;
+    margin: rem(16px) 0;
+    padding-inline-start: 64px;
 
     .input-search {
         max-width: rem(500px);
@@ -8,14 +9,11 @@
         height: rem(48px);
 
         display: block;
-        margin: auto;
         box-sizing: border-box;
         border: none;
         border-radius: .4rem;
         font-size: 16px;
 
-        // background-position: 10px 10px;
-        // background-repeat: no-repeat;
         padding: 12px 20px 12px 40px;
         transition: all 0.2s ease;
 
@@ -32,5 +30,16 @@
         &:focus-visible {
             outline: none;
         }
+    }
+
+    @include mq(mq-540) {
+        padding-inline-start: 0;
+
+        margin: rem(16px) 0;
+
+        .input-search {
+            margin: auto;
+        }
+
     }
 }

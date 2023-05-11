@@ -26,9 +26,18 @@ $breakpoints: (
     large: em(992px),
     mq-540: em(540px),
     mq-768: em(768px),
+    mq-769: em(769px),
     mq-1024: em(1024px),
     mq-1200: em(1200px),
 );
+
+@mixin mq-max($key) {
+    $size: map.get($breakpoints, $key);
+
+    @media (max-width: $size) {
+        @content;
+    }
+}
 
 @mixin mq($key) {
     $size: map.get($breakpoints, $key);

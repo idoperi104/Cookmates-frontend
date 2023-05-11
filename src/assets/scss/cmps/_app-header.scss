@@ -3,7 +3,6 @@
     color: $clr-base-10;
     height: rem(52px);
     padding: 0 20px;
-
     position: sticky;
     top: 0;
     z-index: 1;
@@ -20,25 +19,97 @@
             }
         }
 
-        .main-nav {
-            gap: 24px;
+        // .main-nav {
+        //     // display: flex;
+        //     gap: 24px;
 
-            a {
-                transition: all .1s ease;
-                font-size: rem(18px);
+        //     // height: auto;
 
-                &.active {
-                    scale: 1.2;
-                }
+        //     a {
+        //         transition: all .1s ease;
+        //         font-size: rem(18px);
 
-                &:hover {
-                    scale: 1.2;
-                }
-            }
+        //         &.active {
+        //             scale: 1.2;
+        //         }
+
+        //         &:hover {
+        //             scale: 1.2;
+        //         }
+        //     }
+
+        //     &.is-hidden {
+        //         display: none;
+        //     }
+        // }
+
+        .btn-toggle-menu {
+            padding: 0;
+            font-size: 18px;
+            background-color: transparent;
+            border: none;
         }
 
+    }
 
+    @include mq-max(mq-768) {
+        .header-container {
+            .main-nav {
+                flex-direction: column;
+                gap: rem(10px);
+                background-color: $clr-5;
+                position: absolute;
+                left: 0;
+                top: 52px;
+                width: 100%;
+                height: calc(100vh - 52px);
+                padding: rem(20px) rem(15px) 0 rem(15px);
+                
+                a {
+                    border-radius: $border-radius-3;
+                    transition: all .1s ease;
+                    font-size: rem(18px);
+                    padding: rem(15px);
 
+                    background-color: $clr-base-1;
+
+                }
+
+                &.is-hidden {
+                    display: none;
+                }
+            }
+
+            .btn-toggle-menu {}
+
+        }
+    }
+
+    @include mq(mq-769) {
+        .header-container {
+            .main-nav {
+                display: flex;
+                gap: 24px;
+
+                a {
+                    transition: all .1s ease;
+                    font-size: rem(18px);
+
+                    &.active {
+                        scale: 1.2;
+                    }
+
+                    &:hover {
+                        scale: 1.2;
+                    }
+                }
+            }
+
+            .btn-toggle-menu {
+                display: none;
+            }
+
+        }
     }
 
     @include mq(mq-1200) {
@@ -58,9 +129,9 @@
             .main-nav {
                 gap: 40px;
             }
+
+
         }
 
     }
-
-
 }
