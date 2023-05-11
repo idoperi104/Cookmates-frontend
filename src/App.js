@@ -23,7 +23,7 @@ function App() {
       <section className="app">
         <AppHeader />
 
-        <main className="main-layout main-app">
+        <main className="flex justify-center">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/recipe" element={<RecipeIndex />} />

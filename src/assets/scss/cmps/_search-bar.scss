@@ -1,10 +1,11 @@
 .search-bar {
     // text-align: center;
-    margin: 0 0 rem(16px) 0;
+    // margin: rem(16px) 0;
 
     .input-search {
-        width: rem(500px);
-        height: rem(60px);
+        max-width: rem(500px);
+        width: 100%;
+        height: rem(48px);
 
         display: block;
         margin: auto;
@@ -13,12 +14,14 @@
         border-radius: .4rem;
         font-size: 16px;
 
-        background-position: 10px 10px;
-        background-repeat: no-repeat;
+        // background-position: 10px 10px;
+        // background-repeat: no-repeat;
         padding: 12px 20px 12px 40px;
         transition: all 0.2s ease;
 
-        background-color: #eee;
+        background-color: $clr-base-1;
+
+        @include box-shadow();
 
         &:focus {
             background-color: white;

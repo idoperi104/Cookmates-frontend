@@ -25,31 +25,66 @@ function _RecipeFilter({ filterBy, onChangeFilter }) {
   // };
 
   return (
-    <form className="recipe-filter form-style">
-      <label htmlFor="prepTime">prepTime</label>
-      <input {...register("prepTime", "number")} />
+    <form className="recipe-filter">
+      <div className="container">
+        <label htmlFor="prepTime">prepTime</label>
+        <input {...register("prepTime", "number")} />
 
-      <label htmlFor="cookTime">cookTime</label>
-      <input {...register("cookTime", "number")} />
+        <label htmlFor="cookTime">cookTime</label>
+        <input {...register("cookTime", "number")} />
+      </div>
 
-      <input
-        type="checkbox"
-        id="Pasta"
-        name="Pasta"
-        value={"Pasta"}
-        // checked={checkIfChecked("categories", "Pasta")}
-        onChange={(ev) => handelCheckedChange(ev, "categories")}
-      />
-      <label htmlFor="Pasta">Pasta</label>
-      <input
-        type="checkbox"
-        id="Side Dishes"
-        name="Side Dishes"
-        value={"Side Dishes"}
-        // checked={checkIfChecked("categories", "Side Dishes")}
-        onChange={(ev) => handelCheckedChange(ev, "categories")}
-      />
-      <label htmlFor="Side Dishes">Side Dishes</label>
+      <div className="container">
+        <div className="check-input">
+          <input
+            type="checkbox"
+            id="Pasta"
+            name="Pasta"
+            value={"Pasta"}
+            // checked={checkIfChecked("categories", "Pasta")}
+            onChange={(ev) => handelCheckedChange(ev, "categories")}
+          />
+          <label htmlFor="Pasta">Pasta</label>
+        </div>
+
+        <div className="check-input">
+          <input
+            type="checkbox"
+            id="Side Dishes"
+            name="Side Dishes"
+            value={"Side Dishes"}
+            // checked={checkIfChecked("categories", "Side Dishes")}
+            onChange={(ev) => handelCheckedChange(ev, "categories")}
+          />
+          <label htmlFor="Side Dishes">Side Dishes</label>
+        </div>
+      </div>
+      <div className="container">
+        <div className="check-input">
+          <input
+            type="checkbox"
+            id="Pasta"
+            name="Pasta"
+            value={"Pasta"}
+            // checked={checkIfChecked("categories", "Pasta")}
+            onChange={(ev) => handelCheckedChange(ev, "categories")}
+          />
+          <label htmlFor="Pasta">Pasta</label>
+        </div>
+
+        <div className="check-input">
+          <input
+            type="checkbox"
+            id="Side Dishes"
+            name="Side Dishes"
+            value={"Side Dishes"}
+            // checked={checkIfChecked("categories", "Side Dishes")}
+            onChange={(ev) => handelCheckedChange(ev, "categories")}
+          />
+          <label htmlFor="Side Dishes">Side Dishes</label>
+        </div>
+      </div>
+      
     </form>
   );
 }

@@ -1,6 +1,25 @@
 .recipe-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, 310px);
-    justify-content: center;
-    gap: 15px;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: em(15px);
+    column-gap: em(10px);
+    margin-top: 16px;
+    margin-inline: auto;
+    
+    
+    
+    @include mq(mq-768) {
+        max-width: em(924px);
+        grid-template-columns: repeat(3, 1fr);
+
+
+    }
+
+    @include mq(mq-1200) {
+        max-width: none;
+        row-gap: em(30px);
+        column-gap: em(20px);
+        margin-top: 0;
+
+    }
 }

@@ -1,0 +1,39 @@
+.recipe-filter {
+    background-color: $clr-base-1;
+    border-radius: $border-radius-5;
+    @include box-shadow();
+    // margin-inline: em(16px);
+    padding: em(15px);
+    max-width: em(924px);
+
+
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-inline: auto;
+
+
+    
+    
+    
+    
+    
+    .check-section {}
+    
+    @include mq(mq-1024) {
+        // grid-template-columns: repeat(4, 1fr);
+
+    }
+
+    @include mq(mq-1200) {
+        display: block;
+
+        position: sticky;
+        top: 90px;
+        z-index: 1;
+
+        margin-inline-start: em(20px);
+
+        height: calc(100vh - 106px);
+    }
+}

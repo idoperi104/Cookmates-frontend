@@ -45,9 +45,6 @@ export function RecipeIndex() {
   return (
     <section className="recipe-index">
       {/* <pre>{JSON.stringify(loggedinUser, null,2)}</pre> */}
-      {/* <button onClick={() => onToggleLiked('JypGB')}>click</button> */}
-      {/* <pre>{JSON.stringify(recipes, null, 2)}</pre> */}
-      {/* <RecipeFilter filterBy={filterBy} onChangeFilter={onChangeFilter} /> */}
 
       <SearchBar filterBy={filterBy} onChangeFilter={onChangeFilter} />
       <RecipeFilter filterBy={filterBy} onChangeFilter={onChangeFilter} />

@@ -6,7 +6,7 @@ import { faHeart } from "@fortawesome/free-solid-svg-icons";
 
 export function RecipePreview({ recipe, onToggleLike, likedIds }) {
   const getLikedClass = () => {
-    return likedIds.includes(recipe._id) ? "liked" : "";
+    return likedIds?.includes(recipe._id) ? "liked" : "";
   };
 
   return (
@@ -25,6 +25,7 @@ export function RecipePreview({ recipe, onToggleLike, likedIds }) {
         {/* <FontAwesomeIcon icon={faHeart} /> */}
         <FontAwesomeIcon icon={faHeart} />
       </button>
+      <div className="cover"></div>
     </article>
   );
 }
