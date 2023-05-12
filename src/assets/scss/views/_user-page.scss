@@ -1,0 +1,36 @@
+.user-page {
+    .add-recipe {
+        .btn-add {
+            width: 170px;
+            height: 42px;
+            border-radius: $border-radius-5;
+            background-color: $clr-base-1;
+            border: none;
+            margin: rem(16px);
+            padding-inline: rem(12px);
+            font-size: rem(16px);
+            @include box-shadow();
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            &:hover {
+                background-color: $clr-base-5;
+            }
+
+        }
+    }
+
+    .btn-logout {
+        width: 120px;
+        height: 42px;
+        border-radius: $border-radius-5;
+        background-color: $clr-base-1;
+        border: none;
+        margin: rem(16px);
+        padding-inline: rem(12px);
+        font-size: rem(16px);
+        @include box-shadow();
+    }
+}

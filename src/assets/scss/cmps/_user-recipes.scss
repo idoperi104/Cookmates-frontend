@@ -1,0 +1,30 @@
+.user-recipes {
+    .user-recipes-list {}
+}
+
+
+.user-recipes-preview {
+    position: relative;
+
+    .btn-remove,
+    .btn-edit {
+        padding: 8px;
+        font-size: 18px;
+        position: absolute;
+        bottom: 8px;
+        background-color: transparent;
+        border: none;
+
+        &:hover {
+            color: $clr-base-8;
+        }
+    }
+
+    .btn-remove {
+        left: 8px;
+    }
+
+    .btn-edit {
+        right: 8px;
+    }
+}

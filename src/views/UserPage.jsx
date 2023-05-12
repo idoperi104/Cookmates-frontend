@@ -7,6 +7,8 @@ import { UserRecipes } from "../cmps/UserRecipes";
 import { DynamicRecipes } from "../cmps/DynamicRecipes";
 import { setFilterBy } from "../store/actions/recipe.actions";
 import { recipeService } from "../services/recipe.service.local";
+import { faPlus } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export function UserPage() {
   const user = useSelector((storeState) => storeState.userModule.loggedinUser);
@@ -16,7 +18,7 @@ export function UserPage() {
   useEffect(() => {
     return () => {
       dispatch(setFilterBy(recipeService.getEmptyFilterBy()));
-    }
+    };
   }, []);
 
   async function onLogout() {
@@ -29,23 +31,30 @@ export function UserPage() {
 
   return user ? (
     <section className="user-page">
-      <h2>hello {user.username}!</h2>
+      <Link className="add-recipe" to="/recipe/edit">
+        <button className="btn-add">
+          <FontAwesomeIcon className="icon" icon={faPlus} />
+          <span className="text">add a new recipe</span>
+        </button>
+      </Link>
 
-      <section className="add-recipe">
-        <Link to="/recipe/edit">Add Recipe</Link>
-      </section>
+      <DynamicRecipes
+        filterBy={{ ids: user.likedRecipesIds }}
+        numOfColumns="4"
+        title="liked"
+        subTitle="recipes you"
+      />
 
-      <section className="liked-section">
-        <h2>Liked recipes:</h2>
-        <DynamicRecipes filterBy={{ ids: user.likedRecipesIds }} />
-      </section>
+      <UserRecipes filterBy={{ userId: user._id }} title="your recipes" />
 
-      <section className="my-recipes-section">
-        <h2>My recipes:</h2>
-        <UserRecipes userId={user._id} />
-      </section>
+      <Link className="add-recipe" to="/recipe/edit">
+        <button className="btn-add">
+          <FontAwesomeIcon className="icon" icon={faPlus} />
+          <span className="text">add a new recipe</span>
+        </button>
+      </Link>
 
-      <button onClick={onLogout}>Log Out</button>
+      <button className="btn-logout" onClick={onLogout}>Log Out</button>
     </section>
   ) : (
     <LoginSignup />

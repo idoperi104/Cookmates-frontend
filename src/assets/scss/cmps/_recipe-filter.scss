@@ -9,9 +9,7 @@
 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    margin:  auto;
-
-    // visibility: hidden;
+    margin: auto;
 
     &.is-hidden {
         display: none;
@@ -19,7 +17,7 @@
 
     .check-section {}
 
-    @include mq(mq-540){
+    @include mq(mq-540) {
         &.is-hidden {
             display: grid;
         }
@@ -32,7 +30,7 @@
         top: 90px;
         z-index: 1;
 
-        margin:  0;
+        margin: 0;
         margin-inline-start: em(20px);
         // margin-inline-start: em(20px);
 
@@ -50,7 +48,7 @@
     border-radius: $border-radius-5;
 
 
-    @include mq(mq-540){
+    @include mq(mq-540) {
         display: none;
     }
 }
