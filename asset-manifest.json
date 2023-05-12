@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Cookmates/static/css/main.03bc7925.css",
-    "main.js": "/Cookmates/static/js/main.4ef22b33.js",
+    "main.css": "/Cookmates/static/css/main.2e30dd57.css",
+    "main.js": "/Cookmates/static/js/main.219b6ec0.js",
     "static/js/787.a07dae3e.chunk.js": "/Cookmates/static/js/787.a07dae3e.chunk.js",
     "static/media/drag.png": "/Cookmates/static/media/drag.37bff14b0abdce48ffc4.png",
     "index.html": "/Cookmates/index.html",
-    "main.03bc7925.css.map": "/Cookmates/static/css/main.03bc7925.css.map",
-    "main.4ef22b33.js.map": "/Cookmates/static/js/main.4ef22b33.js.map",
+    "main.2e30dd57.css.map": "/Cookmates/static/css/main.2e30dd57.css.map",
+    "main.219b6ec0.js.map": "/Cookmates/static/js/main.219b6ec0.js.map",
     "787.a07dae3e.chunk.js.map": "/Cookmates/static/js/787.a07dae3e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.03bc7925.css",
-    "static/js/main.4ef22b33.js"
+    "static/css/main.2e30dd57.css",
+    "static/js/main.219b6ec0.js"
   ]
 }
