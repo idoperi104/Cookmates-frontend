@@ -33,16 +33,16 @@ This project was built using the following technologies:
 
 ### Home Page
 
-![Home Page](screenshots/home.png)
+![Home Page](screenshots/1.png)
 
 ### Recipes Page
 
-![Recipes Page](screenshots/recipes.png)
+![Recipes Page](screenshots/2.png)
 
 
 ### Profile Page
 
-![Profile Page](screenshots/profile.png)
+![Profile Page](screenshots/3.png)
 
 ## Getting Started
 
