@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Cookmates-frontend/static/css/main.2e30dd57.css",
-    "main.js": "/Cookmates-frontend/static/js/main.dfc427a0.js",
+    "main.css": "/Cookmates-frontend/static/css/main.c8f363d4.css",
+    "main.js": "/Cookmates-frontend/static/js/main.25feaa5f.js",
     "static/js/787.a07dae3e.chunk.js": "/Cookmates-frontend/static/js/787.a07dae3e.chunk.js",
     "static/media/drag.png": "/Cookmates-frontend/static/media/drag.37bff14b0abdce48ffc4.png",
     "index.html": "/Cookmates-frontend/index.html",
-    "main.2e30dd57.css.map": "/Cookmates-frontend/static/css/main.2e30dd57.css.map",
-    "main.dfc427a0.js.map": "/Cookmates-frontend/static/js/main.dfc427a0.js.map",
+    "main.c8f363d4.css.map": "/Cookmates-frontend/static/css/main.c8f363d4.css.map",
+    "main.25feaa5f.js.map": "/Cookmates-frontend/static/js/main.25feaa5f.js.map",
     "787.a07dae3e.chunk.js.map": "/Cookmates-frontend/static/js/787.a07dae3e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2e30dd57.css",
-    "static/js/main.dfc427a0.js"
+    "static/css/main.c8f363d4.css",
+    "static/js/main.25feaa5f.js"
   ]
 }
