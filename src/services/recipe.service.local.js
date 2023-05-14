@@ -21,9 +21,8 @@ async function query(filterBy = { title: "" }) {
 
   var recipes = await storageService.query(STORAGE_KEY);
   if (!recipes || recipes.length === 0) {
-    console.log('---------');
     localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
-    recipes = await storageService.query(STORAGE_KEY);
+    recipes = data;
   }
   if (filterBy.title) {
     const regex = new RegExp(filterBy.title, "i");
