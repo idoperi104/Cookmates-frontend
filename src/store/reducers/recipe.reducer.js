@@ -49,18 +49,6 @@ export function recipeReducer(state = INITIAL_STATE, action = {}) {
         ...state,
         filterBy: { ...action.filterBy },
       };
-    case SET_USER_RECIPES:
-      return {
-        ...state,
-        userRecipes: action.recipes,
-      };
-    case REMOVE_USER_RECIPE:
-      return {
-        ...state,
-        userRecipes: state.userRecipes.filter(
-          (recipe) => recipe._id !== action.recipeId
-        ),
-      };
 
     default:
       return state;

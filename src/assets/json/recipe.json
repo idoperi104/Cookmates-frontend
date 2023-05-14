@@ -99,7 +99,7 @@
       "_id": "u1erer",
       "imgUrl": "https://res.cloudinary.com/dbf0uxszt/image/upload/v1679588779/maria_ay4vux.png"
     },
-    "description": "A tasty vegetarian twist on classic Mexican tacos, featuring roasted cauliflower and a variety of colorful toppings.",
+    "description": "A tasty vegetarian twist on classic Mexican tacos.",
     "imgUrl": "https://www.eatingbirdfood.com/wp-content/uploads/2022/04/cauliflower-tacos-hero.jpg",
     "ingredients": [
       {
@@ -178,7 +178,7 @@
   },
   {
     "title": "Crispy Parmesan Chicken",
-    "description": "This easy-to-make crispy chicken recipe is perfect for a quick and tasty dinner.",
+    "description": "crispy chicken recipe is perfect for a quick and tasty dinner.",
     "imgUrl": "https://cdn.apartmenttherapy.info/image/upload/f_jpg,q_auto:eco,c_fill,g_auto,w_1500,ar_1:1/k%2FPhoto%2FRecipes%2F2020-03-One-Pan-Crispy-Parmesan-Chicken-Cutlets%2F2020_everydayfood_parmchickencutlet1_059",
     "categories": ["chicken", "dinner", "easy"],
     "servings": 4,
@@ -307,7 +307,7 @@
     "title": "Grilled Salmon with Lemon and Dill",
     "categories": ["seafood", "dinner"],
     "imgUrl": "https://www.simplyrecipes.com/thmb/dHQOaU9YEDErpq03ic1CAg5pZN8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2013__06__grilled-salmon-dill-butter-horiz-640-887464d180534e0e9b0e009c50e96e23.jpg",
-    "description": "A healthy and flavorful grilled salmon recipe with a lemon and dill marinade.",
+    "description": "A healthy grilled salmon with a lemon and dill.",
     "ingredients": [
       {
         "name": "salmon fillets",
@@ -375,7 +375,7 @@
     "title": "Fluffy Pancakes",
     "categories": ["breakfast"],
     "imgUrl": "https://img.buzzfeed.com/video-api-prod/assets/948a9cec015e4ff7aef1d761c506ac05/PancakePinterest1.jpg",
-    "description": "These fluffy pancakes are perfect for a lazy Sunday breakfast. Serve with your favorite toppings!",
+    "description": "fluffy pancakes for a lazy Sunday breakfast.",
     "ingredients": [
       {
         "name": "all-purpose flour",
@@ -451,7 +451,7 @@
     "title": "Blueberry Pancakes",
     "categories": ["breakfast"],
     "imgUrl": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-1273456_8-a5710e5.jpg",
-    "description": "Fluffy pancakes studded with juicy blueberries, perfect for a lazy weekend breakfast.",
+    "description": "Fluffy pancakes studded with juicy blueberries",
     "ingredients": [
       {
         "name": "all-purpose flour",
@@ -522,10 +522,10 @@
     }
   },
   {
-    "title": "Healthy Banana Oatmeal Pancakes",
+    "title": "Banana Oatmeal Pancakes",
     "categories": ["breakfast", "healthy"],
     "imgUrl": "https://www.modernhoney.com/wp-content/uploads/2017/01/DSC_0516-copy.jpg",
-    "description": "Healthy and delicious pancakes made with banana, oats, and almond milk.",
+    "description": "pancakes made with banana, oats, and almond milk.",
     "ingredients": [
       {
         "name": "bananas",
@@ -605,7 +605,7 @@
     "title": "Vegan Banana Pancakes",
     "categories": ["vegan", "breakfast"],
     "imgUrl": "https://runningonrealfood.com/wp-content/uploads/2021/11/Vegan-Gluten-Free-Banana-Oat-Pancakes-12.jpg",
-    "description": "Fluffy and delicious pancakes made with ripe bananas and oat flour.",
+    "description": "Fluffy and delicious vegan pancakes.",
     "ingredients": [
       {
         "name": "ripe bananas",
@@ -679,7 +679,7 @@
     "title": "Vegan Tofu Scramble",
     "categories": ["vegan", "breakfast"],
     "imgUrl": "https://rainbowplantlife.com/wp-content/uploads/2021/06/tofu-scramble-on-table-square-1-of-1.jpg",
-    "description": "A flavorful vegan version of scrambled eggs, made with crumbled tofu and a variety of vegetables.",
+    "description": "Vegan version of scrambled eggs.",
     "ingredients": [
       {
         "name": "extra-firm tofu",

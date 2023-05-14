@@ -36,10 +36,8 @@ function App() {
         </main>
 
         {/* <footer>
-                <section className="container">
-                    cookRights 2022 &copy;
-                </section>
-            </footer> */}
+          <section className="container">cookRights 2023 &copy;</section>
+        </footer> */}
       </section>
     </Router>
   );
