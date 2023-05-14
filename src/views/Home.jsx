@@ -7,25 +7,25 @@ export function Home() {
     <section className="home">
       <DynamicRecipes
         subTitle="top category"
-        title="meat"
-        filterBy={{ categories: ["Meat"] }}
+        title="dinner"
+        filterBy={{ categories: ["dinner"] }}
         numOfColumns="4"
       />
       <DynamicRecipes
         subTitle="are you"
-        title="italian?"
-        filterBy={{ categories: ["Italian"] }}
+        title="vegan?"
+        filterBy={{ categories: ["vegan"] }}
       />
       <DynamicRecipes
         subTitle="Maybe you have searched:"
-        title="'spaghetti' ?"
-        filterBy={{ title: "spa" }}
+        title="'pancakes' ?"
+        filterBy={{ title: "pancakes" }}
         numOfColumns="4"
       />
       <DynamicRecipes
         subTitle="Some of our favorites"
-        title="Recipes with garlic"
-        filterBy={{ title: "garlic" }}
+        title="tacos"
+        filterBy={{ title: "tacos" }}
       />
     </section>
   );

@@ -29,6 +29,8 @@ export function UserPage() {
     }
   }
 
+  console.log(user?.likedRecipesIds);
+
   return user ? (
     <section className="user-page">
       <Link className="add-recipe" to="/recipe/edit">
@@ -41,8 +43,8 @@ export function UserPage() {
       <DynamicRecipes
         filterBy={{ ids: user.likedRecipesIds }}
         numOfColumns="4"
-        title="liked"
         subTitle="recipes you"
+        title="liked"
       />
 
       <UserRecipes filterBy={{ userId: user._id }} title="your recipes" />

@@ -29,7 +29,7 @@ export function DynamicRecipes({ title, subTitle, filterBy, numOfColumns = "3" }
   };
 
   const getLikedClass = (recipeId) => {
-    return loggedinUser?.likedRecipesIds.includes(recipeId) ? "liked" : "";
+    return loggedinUser?.likedRecipesIds?.includes(recipeId) ? "liked" : "";
   };
 
   if (!recipes) return <div>Loading...</div>;

@@ -2,7 +2,7 @@
   "name": "cookmates",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://idoperi104.github.io/Cookmates",
+  "homepage": "http://idoperi104.github.io/Cookmates-frontend",
   "dependencies": {
     "@cloudinary/react": "^1.11.2",
     "@cloudinary/url-gen": "^1.10.0",

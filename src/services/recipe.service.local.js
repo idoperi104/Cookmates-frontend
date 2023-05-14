@@ -1,5 +1,6 @@
 import { storageService } from "./async-storage.service.js";
 import { utilService } from "./util.service.js";
+import data from '../assets/json/recipe.json'
 
 const STORAGE_KEY = "recipe";
 
@@ -20,7 +21,8 @@ async function query(filterBy = { title: "" }) {
 
   var recipes = await storageService.query(STORAGE_KEY);
   if (!recipes || recipes.length === 0) {
-    await postRecipes();
+    console.log('---------');
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
     recipes = await storageService.query(STORAGE_KEY);
   }
   if (filterBy.title) {

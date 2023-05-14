@@ -147,6 +147,7 @@ async function loadUsers() {
       password: "shahar",
       imgUrl:
         "https://res.cloudinary.com/dbf0uxszt/image/upload/v1679588778/shahar_wnnnux.png",
+      likedRecipesIds: [],
     },
     {
       _id: "u101",
@@ -155,6 +156,7 @@ async function loadUsers() {
       password: "ido",
       imgUrl:
         "https://res.cloudinary.com/dbf0uxszt/image/upload/v1679588729/ido_wqplye.png",
+      likedRecipesIds: [],
     },
     {
       _id: "u102",
@@ -163,6 +165,7 @@ async function loadUsers() {
       password: "tomer",
       imgUrl:
         "https://res.cloudinary.com/dbf0uxszt/image/upload/v1679588803/tomer_wm04gf.png",
+      likedRecipesIds: [],
     },
     {
       _id: "u103",
@@ -171,6 +174,7 @@ async function loadUsers() {
       password: "puki",
       imgUrl:
         "https://res.cloudinary.com/dbf0uxszt/image/upload/v1679588803/tomer_wm04gf.png",
+      likedRecipesIds: [],
     },
     {
       _id: "u104",
@@ -179,6 +183,7 @@ async function loadUsers() {
       password: "muki",
       imgUrl:
         "https://res.cloudinary.com/dbf0uxszt/image/upload/v1679588778/shahar_wnnnux.png",
+      likedRecipesIds: [],
     },
     {
       _id: "u105",
@@ -187,6 +192,7 @@ async function loadUsers() {
       password: "da",
       imgUrl:
         "https://res.cloudinary.com/dbf0uxszt/image/upload/v1679588729/ido_wqplye.png",
+      likedRecipesIds: [],
     },
   ];
 

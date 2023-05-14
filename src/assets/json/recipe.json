@@ -1,0 +1,761 @@
+[
+  {
+    "categories": ["italian", "pasta", "meat", "dinner"],
+    "cookTime": 60,
+    "createdBy": {
+      "fullname": "Shahar Saadon",
+      "_id": "u100",
+      "imgUrl": "https://res.cloudinary.com/dbf0uxszt/image/upload/v1679588778/shahar_wnnnux.png"
+    },
+    "description": "A classic Italian dish with a rich tomato sauce and ground beef.",
+    "imgUrl": "https://www.slimmingeats.com/blog/wp-content/uploads/2010/04/spaghetti-bolognese-36-720x720.jpg",
+    "ingredients": [
+      {
+        "name": "spaghetti",
+        "amount": 1,
+        "servingSize": "pound",
+        "description": "dried"
+      },
+      {
+        "name": "ground beef",
+        "amount": 1,
+        "servingSize": "pound",
+        "description": "lean"
+      },
+      {
+        "name": "onion",
+        "amount": 1,
+        "servingSize": "medium",
+        "description": "chopped"
+      },
+      {
+        "name": "garlic",
+        "amount": 3,
+        "servingSize": "cloves",
+        "description": "minced"
+      },
+      {
+        "name": "crushed tomatoes",
+        "amount": 28,
+        "servingSize": "ounces",
+        "description": ""
+      },
+      {
+        "name": "tomato paste",
+        "amount": 2,
+        "servingSize": "tablespoons",
+        "description": ""
+      },
+      {
+        "name": "red wine",
+        "amount": 1,
+        "servingSize": "cup",
+        "description": ""
+      },
+      {
+        "name": "beef broth",
+        "amount": 1,
+        "servingSize": "cup",
+        "description": ""
+      },
+      {
+        "name": "olive oil",
+        "amount": 2,
+        "servingSize": "tablespoons",
+        "description": ""
+      },
+      {
+        "name": "salt",
+        "amount": 1,
+        "servingSize": "teaspoon",
+        "description": ""
+      },
+      {
+        "name": "black pepper",
+        "amount": 1,
+        "servingSize": "teaspoon",
+        "description": ""
+      }
+    ],
+    "instructions": [
+      "In a large pot, bring salted water to a boil and cook the spaghetti according to package instructions.",
+      "In a large skillet, heat the olive oil over medium heat. Add the onion and cook until softened, about 5 minutes.",
+      "Add the garlic and cook for another minute.",
+      "Add the ground beef and cook until browned, breaking it up into small pieces as it cooks.",
+      "Stir in the crushed tomatoes, tomato paste, red wine, beef broth, salt, and black pepper.",
+      "Bring the sauce to a simmer and cook for 30-40 minutes, stirring occasionally.",
+      "Serve the spaghetti with the sauce on top."
+    ],
+    "prepTime": 20,
+    "servings": 4,
+    "title": "Spaghetti Bolognese",
+    "_id": "JypGB"
+  },
+  {
+    "categories": ["mexican", "vegetarian", "dinner"],
+    "cookTime": 30,
+    "createdBy": {
+      "fullname": "Maria Gomez",
+      "_id": "u1erer",
+      "imgUrl": "https://res.cloudinary.com/dbf0uxszt/image/upload/v1679588779/maria_ay4vux.png"
+    },
+    "description": "A tasty vegetarian twist on classic Mexican tacos, featuring roasted cauliflower and a variety of colorful toppings.",
+    "imgUrl": "https://www.eatingbirdfood.com/wp-content/uploads/2022/04/cauliflower-tacos-hero.jpg",
+    "ingredients": [
+      {
+        "name": "cauliflower",
+        "amount": 1,
+        "servingSize": "head",
+        "description": "cut into bite-sized pieces"
+      },
+      {
+        "name": "taco seasoning",
+        "amount": 2,
+        "servingSize": "tablespoons",
+        "description": ""
+      },
+      {
+        "name": "olive oil",
+        "amount": 2,
+        "servingSize": "tablespoons",
+        "description": ""
+      },
+      {
+        "name": "corn tortillas",
+        "amount": 12,
+        "servingSize": "",
+        "description": ""
+      },
+      {
+        "name": "avocado",
+        "amount": 1,
+        "servingSize": "",
+        "description": "sliced"
+      },
+      {
+        "name": "red onion",
+        "amount": 1,
+        "servingSize": "",
+        "description": "sliced"
+      },
+      {
+        "name": "radishes",
+        "amount": 4,
+        "servingSize": "",
+        "description": "sliced"
+      },
+      {
+        "name": "cilantro",
+        "amount": 1,
+        "servingSize": "bunch",
+        "description": "chopped"
+      },
+      {
+        "name": "sour cream",
+        "amount": 1,
+        "servingSize": "cup",
+        "description": ""
+      },
+      {
+        "name": "lime",
+        "amount": 1,
+        "servingSize": "",
+        "description": "cut into wedges"
+      }
+    ],
+    "instructions": [
+      "Preheat the oven to 425°F (220°C).",
+      "In a large bowl, toss the cauliflower with the taco seasoning and olive oil until well coated.",
+      "Spread the cauliflower out in a single layer on a baking sheet and roast in the preheated oven for 20-25 minutes, until tender and lightly browned.",
+      "While the cauliflower roasts, warm the corn tortillas in a dry skillet over medium heat.",
+      "To assemble the tacos, place a spoonful of the roasted cauliflower in each tortilla, then top with sliced avocado, red onion, radishes, and chopped cilantro.",
+      "Drizzle with sour cream and serve with lime wedges on the side."
+    ],
+    "prepTime": 15,
+    "servings": 6,
+    "title": "Roasted Cauliflower Tacos",
+    "_id": "nG7sF"
+  },
+  {
+    "title": "Crispy Parmesan Chicken",
+    "description": "This easy-to-make crispy chicken recipe is perfect for a quick and tasty dinner.",
+    "imgUrl": "https://cdn.apartmenttherapy.info/image/upload/f_jpg,q_auto:eco,c_fill,g_auto,w_1500,ar_1:1/k%2FPhoto%2FRecipes%2F2020-03-One-Pan-Crispy-Parmesan-Chicken-Cutlets%2F2020_everydayfood_parmchickencutlet1_059",
+    "categories": ["chicken", "dinner", "easy"],
+    "servings": 4,
+    "prepTime": 10,
+    "cookTime": 25,
+    "ingredients": [
+      { "name": "boneless skinless chicken breasts", "amount": 4, "servingSize": "ounces", "description": "" },
+      { "name": "all-purpose flour", "amount": 0.5, "servingSize": "cup", "description": "" },
+      { "name": "eggs", "amount": 2, "servingSize": "", "description": "" },
+      { "name": "water", "amount": 2, "servingSize": "tablespoons", "description": "" },
+      { "name": "panko bread crumbs", "amount": 0.5, "servingSize": "cup", "description": "" },
+      { "name": "grated Parmesan cheese", "amount": 0.5, "servingSize": "cup", "description": "" },
+      { "name": "salt", "amount": 0.5, "servingSize": "teaspoon", "description": "" },
+      { "name": "pepper", "amount": 0.25, "servingSize": "teaspoon", "description": "" },
+      { "name": "garlic powder", "amount": 0.5, "servingSize": "teaspoon", "description": "" },
+      { "name": "paprika", "amount": 0.5, "servingSize": "teaspoon", "description": "" },
+      { "name": "olive oil", "amount": 0.25, "servingSize": "cup", "description": "" }
+    ],
+    "instructions": [
+      "Preheat oven to 400°. Pound chicken breasts with a meat mallet until evenly thin.",
+      "Place flour in a shallow bowl. In a separate shallow bowl, whisk together eggs and water. In a third shallow bowl, mix bread crumbs, Parmesan cheese, salt, pepper, garlic powder and paprika.",
+      "Dip chicken in flour to coat both sides; shake off excess. Dip in egg mixture, then in bread crumb mixture, patting to help coating adhere.",
+      "In a large skillet, heat oil over medium heat. Add chicken; cook until golden brown, 2-3 minutes on each side. Transfer to a baking sheet.",
+      "Bake 10-12 minutes or until chicken is no longer pink."
+    ],
+    "createdBy": {
+      "fullname": "John Smith",
+      "_id": "u200",
+      "imgUrl": "https://randomuser.me/api/portraits/men/47.jpg"
+    },
+    "_id": "v89jsa"
+  },
+  {
+    "categories": ["dessert", "baking"],
+    "cookTime": 50,
+    "createdBy": {
+      "fullname": "Alice Smith",
+      "_id": "u2ee0",
+      "imgUrl": "https://res.cloudinary.com/dbf0uxszt/image/upload/v1679588778/alice_yzzjkp.png"
+    },
+    "description": "A classic chocolate cake with a rich frosting that's perfect for any occasion.",
+    "imgUrl": "https://food-images.files.bbci.co.uk/food/recipes/easy_chocolate_cake_31070_16x9.jpg",
+    "ingredients": [
+      {
+        "name": "all-purpose flour",
+        "amount": 2,
+        "servingSize": "cups",
+        "description": ""
+      },
+      {
+        "name": "granulated sugar",
+        "amount": 2,
+        "servingSize": "cups",
+        "description": ""
+      },
+      {
+        "name": "unsweetened cocoa powder",
+        "amount": 0.75,
+        "servingSize": "cup",
+        "description": ""
+      },
+      {
+        "name": "baking powder",
+        "amount": 2,
+        "servingSize": "teaspoons",
+        "description": ""
+      },
+      {
+        "name": "baking soda",
+        "amount": 2,
+        "servingSize": "teaspoons",
+        "description": ""
+      },
+      {
+        "name": "salt",
+        "amount": 1,
+        "servingSize": "teaspoon",
+        "description": ""
+      },
+      {
+        "name": "eggs",
+        "amount": 2,
+        "servingSize": "",
+        "description": ""
+      },
+      {
+        "name": "buttermilk",
+        "amount": 1,
+        "servingSize": "cup",
+        "description": ""
+      },
+      {
+        "name": "vegetable oil",
+        "amount": 0.5,
+        "servingSize": "cup",
+        "description": ""
+      },
+      {
+        "name": "vanilla extract",
+        "amount": 2,
+        "servingSize": "teaspoons",
+        "description": ""
+      },
+      {
+        "name": "boiling water",
+        "amount": 1,
+        "servingSize": "cup",
+        "description": ""
+      }
+    ],
+    "instructions": [
+      "Preheat oven to 350 degrees F. Grease and flour two 9-inch round baking pans.",
+      "In a large mixing bowl, combine flour, sugar, cocoa, baking powder, baking soda, and salt.",
+      "Add eggs, buttermilk, oil, and vanilla. Beat with an electric mixer on medium speed for 2 minutes.",
+      "Stir in boiling water (the batter will be thin). Pour batter into prepared pans.",
+      "Bake for 30 to 35 minutes, or until a toothpick inserted in the center comes out clean.",
+      "Cool cakes in pans on wire racks for 10 minutes. Remove from pans and cool completely on wire racks.",
+      "Prepare frosting (recipe follows) and frost cooled cakes."
+    ],
+    "prepTime": 20,
+    "servings": 12,
+    "title": "Chocolate Cake",
+    "_id": "BynJF"
+  },
+  {
+    "title": "Grilled Salmon with Lemon and Dill",
+    "categories": ["seafood", "dinner"],
+    "imgUrl": "https://www.simplyrecipes.com/thmb/dHQOaU9YEDErpq03ic1CAg5pZN8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2013__06__grilled-salmon-dill-butter-horiz-640-887464d180534e0e9b0e009c50e96e23.jpg",
+    "description": "A healthy and flavorful grilled salmon recipe with a lemon and dill marinade.",
+    "ingredients": [
+      {
+        "name": "salmon fillets",
+        "amount": 4,
+        "servingSize": "6 ounces",
+        "description": "skin-on"
+      },
+      {
+        "name": "olive oil",
+        "amount": 3,
+        "servingSize": "tablespoons",
+        "description": ""
+      },
+      {
+        "name": "lemon juice",
+        "amount": 3,
+        "servingSize": "tablespoons",
+        "description": "freshly squeezed"
+      },
+      {
+        "name": "garlic",
+        "amount": 2,
+        "servingSize": "cloves",
+        "description": "minced"
+      },
+      {
+        "name": "dill",
+        "amount": 2,
+        "servingSize": "tablespoons",
+        "description": "chopped"
+      },
+      {
+        "name": "salt",
+        "amount": 1,
+        "servingSize": "teaspoon",
+        "description": ""
+      },
+      {
+        "name": "black pepper",
+        "amount": 1,
+        "servingSize": "teaspoon",
+        "description": ""
+      }
+    ],
+    "instructions": [
+      "In a small bowl, whisk together the olive oil, lemon juice, garlic, dill, salt, and black pepper.",
+      "Place the salmon fillets in a large resealable plastic bag and pour the marinade over them.",
+      "Seal the bag and refrigerate for at least 30 minutes, or up to 2 hours.",
+      "Preheat the grill to medium-high heat. Remove the salmon from the marinade and discard the remaining marinade.",
+      "Place the salmon, skin-side down, on the grill and cook for 6-8 minutes, depending on the thickness of the fillets.",
+      "Carefully flip the salmon over and cook for an additional 2-3 minutes, or until the fish is cooked through and flakes easily with a fork.",
+      "Serve the salmon immediately with additional lemon wedges and fresh dill, if desired."
+    ],
+    "servings": 4,
+    "cookTime": 15,
+    "prepTime": 10,
+    "_id": "gR54T",
+    "createdBy": {
+      "_id": "u230",
+      "fullname": "Maria Sanchez",
+      "imgUrl": "https://www.example.com/user-avatars/u200.jpg"
+    }
+  },
+  {
+    "title": "Fluffy Pancakes",
+    "categories": ["breakfast"],
+    "imgUrl": "https://img.buzzfeed.com/video-api-prod/assets/948a9cec015e4ff7aef1d761c506ac05/PancakePinterest1.jpg",
+    "description": "These fluffy pancakes are perfect for a lazy Sunday breakfast. Serve with your favorite toppings!",
+    "ingredients": [
+      {
+        "name": "all-purpose flour",
+        "amount": 1.5,
+        "servingSize": "cups",
+        "description": ""
+      },
+      {
+        "name": "baking powder",
+        "amount": 3,
+        "servingSize": "teaspoons",
+        "description": ""
+      },
+      {
+        "name": "sugar",
+        "amount": 1,
+        "servingSize": "tablespoon",
+        "description": ""
+      },
+      {
+        "name": "salt",
+        "amount": 0.5,
+        "servingSize": "teaspoon",
+        "description": ""
+      },
+      {
+        "name": "milk",
+        "amount": 1.25,
+        "servingSize": "cups",
+        "description": ""
+      },
+      {
+        "name": "egg",
+        "amount": 1,
+        "servingSize": "",
+        "description": ""
+      },
+      {
+        "name": "butter",
+        "amount": 3,
+        "servingSize": "tablespoons",
+        "description": "melted and cooled"
+      },
+      {
+        "name": "vanilla extract",
+        "amount": 1,
+        "servingSize": "teaspoon",
+        "description": ""
+      }
+    ],
+    "instructions": [
+      "In a large bowl, whisk together the flour, baking powder, sugar, and salt.",
+      "In a separate bowl, whisk together the milk, egg, melted butter, and vanilla extract.",
+      "Pour the wet ingredients into the dry ingredients and whisk until just combined.",
+      "Let the batter rest for 5-10 minutes.",
+      "Heat a large non-stick pan over medium heat. Add a small amount of butter or oil to the pan.",
+      "Using a 0.25 cup measure, pour the batter onto the pan.",
+      "Cook until the edges begin to set and the surface is bubbly. Flip and cook for an additional 1-2 minutes, until golden brown.",
+      "Repeat with the remaining batter.",
+      "Serve the pancakes warm with your favorite toppings, such as maple syrup, whipped cream, or fresh fruit."
+    ],
+    "servings": 4,
+    "cookTime": 15,
+    "prepTime": 10,
+    "_id": "Pc3fR",
+    "createdBy": {
+      "_id": "u300",
+      "fullname": "John Smith",
+      "imgUrl": "https://www.example.com/user-avatars/u300.jpg"
+    }
+  },
+  {
+    "title": "Blueberry Pancakes",
+    "categories": ["breakfast"],
+    "imgUrl": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-1273456_8-a5710e5.jpg",
+    "description": "Fluffy pancakes studded with juicy blueberries, perfect for a lazy weekend breakfast.",
+    "ingredients": [
+      {
+        "name": "all-purpose flour",
+        "amount": 2,
+        "servingSize": "cups",
+        "description": ""
+      },
+      {
+        "name": "baking powder",
+        "amount": 2,
+        "servingSize": "teaspoons",
+        "description": ""
+      },
+      {
+        "name": "salt",
+        "amount": 1,
+        "servingSize": "teaspoon",
+        "description": ""
+      },
+      {
+        "name": "sugar",
+        "amount": 2,
+        "servingSize": "tablespoons",
+        "description": ""
+      },
+      {
+        "name": "milk",
+        "amount": 1,
+        "servingSize": "cup",
+        "description": ""
+      },
+      {
+        "name": "egg",
+        "amount": 1,
+        "servingSize": "",
+        "description": ""
+      },
+      {
+        "name": "butter",
+        "amount": 2,
+        "servingSize": "tablespoons",
+        "description": "melted and cooled slightly"
+      },
+      {
+        "name": "blueberries",
+        "amount": 1,
+        "servingSize": "cup",
+        "description": "fresh or frozen"
+      }
+    ],
+    "instructions": [
+      "In a large bowl, whisk together the flour, baking powder, salt, and sugar.",
+      "In a separate bowl, whisk together the milk, egg, and melted butter.",
+      "Pour the wet ingredients into the dry ingredients and stir until just combined.",
+      "Fold in the blueberries.",
+      "Heat a nonstick skillet or griddle over medium heat. Drop the batter by 0.25 cupfuls onto the skillet and cook until bubbles appear on the surface, about 2-3 minutes.",
+      "Flip the pancakes and cook for another 1-2 minutes, or until golden brown.",
+      "Serve the pancakes warm with butter and maple syrup."
+    ],
+    "servings": 4,
+    "cookTime": 15,
+    "prepTime": 10,
+    "_id": "fB21X",
+    "createdBy": {
+      "_id": "u300",
+      "fullname": "John Smith",
+      "imgUrl": "https://www.example.com/user-avatars/u300.jpg"
+    }
+  },
+  {
+    "title": "Healthy Banana Oatmeal Pancakes",
+    "categories": ["breakfast", "healthy"],
+    "imgUrl": "https://www.modernhoney.com/wp-content/uploads/2017/01/DSC_0516-copy.jpg",
+    "description": "Healthy and delicious pancakes made with banana, oats, and almond milk.",
+    "ingredients": [
+      {
+        "name": "bananas",
+        "amount": 2,
+        "servingSize": "",
+        "description": "mashed"
+      },
+      {
+        "name": "old-fashioned rolled oats",
+        "amount": 1.5,
+        "servingSize": "cups",
+        "description": ""
+      },
+      {
+        "name": "almond milk",
+        "amount": 1,
+        "servingSize": "cup",
+        "description": ""
+      },
+      {
+        "name": "eggs",
+        "amount": 2,
+        "servingSize": "",
+        "description": ""
+      },
+      {
+        "name": "baking powder",
+        "amount": 1,
+        "servingSize": "teaspoon",
+        "description": ""
+      },
+      {
+        "name": "vanilla extract",
+        "amount": 1,
+        "servingSize": "teaspoon",
+        "description": ""
+      },
+      {
+        "name": "ground cinnamon",
+        "amount": 1,
+        "servingSize": "teaspoon",
+        "description": ""
+      },
+      {
+        "name": "salt",
+        "amount": 1,
+        "servingSize": "pinch",
+        "description": ""
+      },
+      {
+        "name": "coconut oil",
+        "amount": 1,
+        "servingSize": "tablespoon",
+        "description": ""
+      }
+    ],
+    "instructions": [
+      "In a blender, blend the mashed bananas, oats, almond milk, eggs, baking powder, vanilla extract, cinnamon, and salt until smooth.",
+      "Let the batter sit for 10 minutes to thicken.",
+      "Heat a non-stick pan over medium heat.",
+      "Add a small amount of coconut oil to the pan.",
+      "Pour the batter onto the pan to form small pancakes.",
+      "Cook the pancakes until the edges start to dry out and the surface is covered in bubbles, then flip and cook for another minute on the other side.",
+      "Serve the pancakes with fresh fruit and a drizzle of maple syrup."
+    ],
+    "servings": 4,
+    "cookTime": 15,
+    "prepTime": 10,
+    "_id": "kL98R",
+    "createdBy": {
+      "_id": "u300",
+      "fullname": "John Smith",
+      "imgUrl": "https://www.example.com/user-avatars/u300.jpg"
+    }
+  },
+  {
+    "title": "Vegan Banana Pancakes",
+    "categories": ["vegan", "breakfast"],
+    "imgUrl": "https://runningonrealfood.com/wp-content/uploads/2021/11/Vegan-Gluten-Free-Banana-Oat-Pancakes-12.jpg",
+    "description": "Fluffy and delicious pancakes made with ripe bananas and oat flour.",
+    "ingredients": [
+      {
+        "name": "ripe bananas",
+        "amount": 2,
+        "servingSize": "",
+        "description": "mashed"
+      },
+      {
+        "name": "oat flour",
+        "amount": 1.5,
+        "servingSize": "cups",
+        "description": ""
+      },
+      {
+        "name": "almond milk",
+        "amount": 1.5,
+        "servingSize": "cups",
+        "description": ""
+      },
+      {
+        "name": "baking powder",
+        "amount": 1.5,
+        "servingSize": "teaspoons",
+        "description": ""
+      },
+      {
+        "name": "vanilla extract",
+        "amount": 1,
+        "servingSize": "teaspoon",
+        "description": ""
+      },
+      {
+        "name": "cinnamon",
+        "amount": 1,
+        "servingSize": "teaspoon",
+        "description": ""
+      },
+      {
+        "name": "salt",
+        "amount": 1,
+        "servingSize": "pinch",
+        "description": ""
+      },
+      {
+        "name": "coconut oil",
+        "amount": 1,
+        "servingSize": "tablespoon",
+        "description": ""
+      }
+    ],
+    "instructions": [
+      "In a large mixing bowl, combine the mashed bananas, oat flour, almond milk, baking powder, vanilla extract, cinnamon, and salt.",
+      "Whisk until a smooth batter forms.",
+      "Heat a non-stick pan over medium heat and add the coconut oil.",
+      "Scoop about 0.25 cup of batter onto the pan for each pancake.",
+      "Cook until bubbles start to form on the surface of the pancake and the edges start to dry, then flip and cook for another 1-2 minutes.",
+      "Repeat until all the batter is used up, adding more coconut oil to the pan as needed.",
+      "Serve the pancakes warm with fresh fruit and maple syrup."
+    ],
+    "servings": 4,
+    "cookTime": 15,
+    "prepTime": 10,
+    "_id": "vgn77",
+    "createdBy": {
+      "_id": "u500",
+      "fullname": "Amanda Green",
+      "imgUrl": "https://www.example.com/user-avatars/u500.jpg"
+    }
+  },
+  {
+    "title": "Vegan Tofu Scramble",
+    "categories": ["vegan", "breakfast"],
+    "imgUrl": "https://rainbowplantlife.com/wp-content/uploads/2021/06/tofu-scramble-on-table-square-1-of-1.jpg",
+    "description": "A flavorful vegan version of scrambled eggs, made with crumbled tofu and a variety of vegetables.",
+    "ingredients": [
+      {
+        "name": "extra-firm tofu",
+        "amount": 14,
+        "servingSize": "ounces",
+        "description": "drained and pressed"
+      },
+      {
+        "name": "olive oil",
+        "amount": 2,
+        "servingSize": "tablespoons",
+        "description": ""
+      },
+      {
+        "name": "yellow onion",
+        "amount": 1,
+        "servingSize": "medium",
+        "description": "diced"
+      },
+      {
+        "name": "red bell pepper",
+        "amount": 1,
+        "servingSize": "medium",
+        "description": "diced"
+      },
+      {
+        "name": "baby spinach",
+        "amount": 2,
+        "servingSize": "cups",
+        "description": ""
+      },
+      {
+        "name": "nutritional yeast",
+        "amount": 2,
+        "servingSize": "tablespoons",
+        "description": ""
+      },
+      {
+        "name": "garlic powder",
+        "amount": 1,
+        "servingSize": "teaspoon",
+        "description": ""
+      },
+      {
+        "name": "turmeric",
+        "amount": 1,
+        "servingSize": "teaspoon",
+        "description": ""
+      },
+      {
+        "name": "salt",
+        "amount": 1,
+        "servingSize": "teaspoon",
+        "description": ""
+      },
+      {
+        "name": "black pepper",
+        "amount": 1,
+        "servingSize": "teaspoon",
+        "description": ""
+      }
+    ],
+    "instructions": [
+      "Heat the olive oil in a large skillet over medium heat. Add the onion and red bell pepper and cook for 5-7 minutes, or until softened.",
+      "Crumble the tofu into the skillet and stir to combine with the vegetables. Add the nutritional yeast, garlic powder, turmeric, salt, and black pepper and stir again to coat the tofu mixture.",
+      "Cook for 5-7 minutes, or until the tofu is heated through and slightly browned. Add the baby spinach and cook for an additional 2-3 minutes, or until wilted.",
+      "Serve the tofu scramble immediately with whole grain toast or your favorite breakfast sides."
+    ],
+    "servings": 4,
+    "cookTime": 15,
+    "prepTime": 10,
+    "_id": "jU98F",
+    "createdBy": {
+      "_id": "u300",
+      "fullname": "Avery Taylor",
+      "imgUrl": "https://www.example.com/user-avatars/u300.jpg"
+    }
+  }
+]
