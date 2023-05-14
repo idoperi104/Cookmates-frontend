@@ -9,6 +9,7 @@
 
     .header-container {
         height: 100%;
+        // position: relative;
 
         .logo-section {
             .logo-title {
@@ -35,27 +36,22 @@
                 gap: rem(10px);
                 background-color: $clr-5;
                 position: absolute;
-                right: 0;
+                left: 0;
                 top: 52px;
                 width: 100%;
                 height: calc(100vh - 52px);
                 padding: rem(20px) rem(15px) 0 rem(15px);
                 transition: all 700ms;
-
                 a {
                     border-radius: $border-radius-3;
                     transition: all .1s ease;
                     font-size: rem(18px);
                     padding: rem(15px);
-
                     background-color: $clr-base-1;
-
                 }
 
                 &.is-hidden {
-                    // display: none;
-                    // top: -100vh;
-                    right: -150vw;
+                    left: -100vw;
                     opacity: .5;
                 }
             }

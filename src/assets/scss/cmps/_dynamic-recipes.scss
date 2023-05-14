@@ -39,10 +39,10 @@
     margin-inline: auto;
 
     &.list-4 {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
 
         .dynamic-preview {
-            height: 200px;
+            height: 240px;
 
             .cover {
 
