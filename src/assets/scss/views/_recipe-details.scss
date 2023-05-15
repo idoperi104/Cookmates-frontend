@@ -1,5 +1,5 @@
 .recipe-details {
-    margin: em(8px) auto 100px auto;
+    margin: em(8px) em(16px) 100px em(8px);
 
     display: grid;
     gap: em(8px);
@@ -81,7 +81,8 @@
         grid-template-columns: 5fr 2fr;
         gap: em(16px);
 
-        margin: em(16px) auto 100px auto;
+        max-width: 1200px;
+        margin: em(16px) em(16px) 100px em(16px);
 
         &>*:not(.info) {
             grid-column: 1;
