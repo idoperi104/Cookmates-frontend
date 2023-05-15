@@ -1,6 +1,6 @@
 .recipe-index {
     position: relative;
-    margin-inline: em(16px);
+    margin-inline: rem(16px);
 
 
     .search-bar {
@@ -19,8 +19,8 @@
 
     @include mq(mq-1200) {
         display: grid;
-        grid-template-rows: em(80px) 1fr;
-        grid-template-columns: em(924px) em(244px);
+        grid-template-rows: rem(80px) 1fr;
+        grid-template-columns: rem(924px) rem(244px);
         grid-template-areas:
             "s s"
             "l f";

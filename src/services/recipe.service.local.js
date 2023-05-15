@@ -17,7 +17,7 @@ export const recipeService = {
 window.rs = recipeService;
 
 async function query(filterBy = { title: "" }) {
-  // console.log("filterBy: ", filterBy);
+  console.log("filterBy: ", filterBy);
 
   var recipes = await storageService.query(STORAGE_KEY);
   if (!recipes || recipes.length === 0) {
@@ -34,7 +34,7 @@ async function query(filterBy = { title: "" }) {
     );
   }
   if (filterBy.ids) {
-    // const {ids} = filterBy
+    console.log("filterBy.ids: ", filterBy.ids);
     recipes = recipes.filter((recipe) => filterBy.ids.includes(recipe._id));
   }
   if (filterBy.categories?.length) {

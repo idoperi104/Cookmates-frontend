@@ -37,7 +37,7 @@ export function UserRecipes({ title, filterBy }) {
   };
 
   const getLikedClass = (recipeId) => {
-    return loggedinUser?.likedRecipesIds.includes(recipeId) ? "liked" : "";
+    return loggedinUser?.likedRecipesIds?.includes(recipeId) ? "liked" : "";
   };
 
   const onRemoveRecipe = useCallback(async (recipeId) => {
