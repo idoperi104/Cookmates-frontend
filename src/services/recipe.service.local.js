@@ -1,6 +1,6 @@
 import { storageService } from "./async-storage.service.js";
 import { utilService } from "./util.service.js";
-import data from '../assets/json/recipe.json'
+import data from "../assets/json/recipe.json";
 
 const STORAGE_KEY = "recipe";
 
@@ -39,13 +39,17 @@ async function query(filterBy = { title: "" }) {
   }
   if (filterBy.categories?.length) {
     recipes = recipes.filter((recipe) =>
-    filterBy.categories.every((category) =>
-        recipe.categories.includes(category)
-      )
+      filterBy.categories.every((category) => {
+        const regex = new RegExp(category, "i");
+        return recipe.categories.find((r) => regex.test(r));
+      })
     );
   }
-  if (filterBy.prepTime){
-    recipes = recipes.filter((recipe) => filterBy.prepTime <= recipe.prepTime);
+  if (filterBy.prepTime) {
+    recipes = recipes.filter((recipe) => filterBy.prepTime >= recipe.prepTime);
+  }
+  if (filterBy.cookTime) {
+    recipes = recipes.filter((recipe) => filterBy.cookTime >= recipe.cookTime);
   }
 
   return recipes;
