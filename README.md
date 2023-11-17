@@ -3,6 +3,9 @@
 
 Welcome to the Cookmates frontend repository! This is a frontend web application for cooking enthusiasts to share recipes and connect with other cooks.
 
+### Live Demo:
+https://idoperi104.github.io/Cookmates-frontend/#/
+
 ## Table of Contents
 
 - [Features](#features)
